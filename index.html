@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Structured Notes &amp; Cross-Asset Solutions — Programa Ejecutivo | RiskMathics Financial Institute</title>
-<meta name="description" content="Programa ejecutivo de Notas Estructuradas: originación, pricing, hedging y distribución estratégica cross-asset. 5 clases · 10 horas · Virtual Live · Inicio julio 2026. Impartido por Gisela Flores (18+ años front office). RiskMathics Financial Institute.">
+<meta name="description" content="Programa ejecutivo de Notas Estructuradas: originación, pricing, hedging y distribución estratégica cross-asset. 5 clases · 10 horas · Virtual Live · 6, 7, 9, 13 y 14 de julio 2026. Impartido por Gisela Flores (18+ años front office). RiskMathics Financial Institute.">
 
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com"></script>
@@ -74,6 +74,13 @@ tailwind.config = {
   .reveal.in { opacity:1; transform:none; }
 
   .matrix-row:hover td { background-color:#fdf9f4; }
+
+  /* Motivo signature RiskMathics: línea de acento 50px × 2px */
+  .rm-accent-line { width:50px; height:2px; background:#c2603a; margin:18px auto 0; }
+  .rm-accent-line--left { margin:18px 0 0; }
+
+  /* Nav: botones con aire, nunca encimados (regla de Allan) */
+  nav .rm-nav-cta, nav a { white-space:nowrap; }
 </style>
 </head>
 <body class="font-sans">
@@ -81,17 +88,18 @@ tailwind.config = {
 <!-- ===== Sticky Nav ===== -->
 <nav class="sticky top-0 z-50 backdrop-blur-md bg-rm-espresso/90 text-white border-b border-rm-copper/30 shadow-lg">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      <span class="font-serif font-semibold tracking-tight text-lg">RISKMATHICS <span class="text-rm-copper2">|</span> <span class="hidden sm:inline">STRUCTURED NOTES 2026</span><span class="sm:hidden">SN 2026</span></span>
-      <div class="hidden md:flex items-center gap-7 text-sm font-medium">
+    <div class="flex justify-between items-center gap-4 h-16">
+      <span class="font-serif font-semibold tracking-tight text-lg whitespace-nowrap">RISKMATHICS <span class="text-rm-copper2">|</span> <span class="hidden sm:inline">STRUCTURED NOTES 2026</span><span class="sm:hidden">SN 2026</span></span>
+      <div class="hidden lg:flex items-center gap-6 text-sm font-medium">
         <a href="#abstract" class="hover:text-rm-copper2 transition">Overview</a>
-        <a href="#objetivo" class="hover:text-rm-copper2 transition">Objetivo</a>
-        <a href="#mercado" class="hover:text-rm-copper2 transition">Por qué ahora</a>
         <a href="#audiencia" class="hover:text-rm-copper2 transition">Para quién</a>
         <a href="#curriculum" class="hover:text-rm-copper2 transition">Curriculum</a>
         <a href="#faculty" class="hover:text-rm-copper2 transition">Faculty</a>
       </div>
-      <a href="#rm-enroll" class="bg-gradient-to-br from-rm-copper2 to-rm-copper text-[#2a1003] text-sm font-bold px-5 py-2 rounded-full hover:-translate-y-0.5 transition shadow-md">Inscribirme</a>
+      <div class="flex items-center gap-4">
+        <a href="#rm-enroll" class="rm-nav-cta hidden md:inline-flex items-center justify-center whitespace-nowrap border border-rm-copper2/60 text-rm-copper2 text-sm font-bold rounded-full hover:bg-rm-copper2/10 transition" style="padding:10px 22px;">Quiero el temario</a>
+        <a href="#rm-enroll" class="rm-nav-cta inline-flex items-center justify-center whitespace-nowrap bg-gradient-to-br from-rm-copper2 to-rm-copper text-[#2a1003] text-sm font-bold rounded-full hover:-translate-y-0.5 transition shadow-md" style="padding:10px 22px;">Inscribirme</a>
+      </div>
     </div>
   </div>
 </nav>
@@ -107,19 +115,20 @@ tailwind.config = {
     <h1 class="font-serif font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight max-w-4xl">
       Structured Notes<br>&amp; Cross-Asset Solutions
     </h1>
+    <div class="rm-accent-line rm-accent-line--left"></div>
     <p class="mt-6 text-lg md:text-2xl text-[#e8d8c8] font-light max-w-3xl leading-relaxed">
       Originación · Pricing · Hedging · Distribución Estratégica.<br class="hidden md:block">
       <span class="text-white font-medium">Engineer the payoff. Defiende el pricing.</span> Habla con la mesa, con riesgo y con el cliente en la misma frase.
     </p>
     <div class="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm text-[#c4ad97]">
-      <span><b class="text-white font-semibold">Inicio</b> · 2 de julio 2026</span>
-      <span><b class="text-white font-semibold">Sesiones</b> · 2, 6, 7, 9 y 13 de julio</span>
+      <span><b class="text-white font-semibold">Inicio</b> · 6 de julio 2026</span>
+      <span><b class="text-white font-semibold">Sesiones</b> · 6, 7, 9, 13 y 14 de julio</span>
       <span><b class="text-white font-semibold">Horario</b> · 7:00–9:00 pm CDMX</span>
       <span><b class="text-white font-semibold">Formato</b> · 5 clases · 10 horas</span>
     </div>
-    <div class="mt-10 flex flex-wrap gap-4">
-      <a href="#rm-enroll" class="bg-gradient-to-br from-rm-copper2 to-rm-copper text-[#2a1003] font-bold px-8 py-4 rounded-full text-base shadow-[0_8px_30px_rgba(194,96,58,.38)] hover:-translate-y-0.5 hover:shadow-[0_12px_38px_rgba(194,96,58,.5)] transition">Quiero el temario</a>
-      <a href="#rm-enroll" class="bg-white/10 border border-white/25 text-white font-semibold px-8 py-4 rounded-full text-base hover:bg-white/15 transition">Inscribirme ahora</a>
+    <div class="mt-10 flex flex-wrap items-center gap-4">
+      <a href="#rm-enroll" class="inline-flex items-center justify-center whitespace-nowrap bg-gradient-to-br from-rm-copper2 to-rm-copper text-[#2a1003] font-bold px-8 py-4 rounded-full text-base shadow-[0_8px_30px_rgba(194,96,58,.38)] hover:-translate-y-0.5 hover:shadow-[0_12px_38px_rgba(194,96,58,.5)] transition">Quiero el temario</a>
+      <a href="#rm-enroll" class="inline-flex items-center justify-center whitespace-nowrap bg-white/10 border border-white/25 text-white font-semibold px-8 py-4 rounded-full text-base hover:bg-white/15 transition">Inscribirme ahora</a>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/15 pt-8 mt-14">
       <div><p class="text-3xl md:text-4xl font-serif font-semibold text-rm-copper2">5</p><p class="text-xs text-[#c4ad97] uppercase tracking-wider mt-1">Módulos · workflow completo</p></div>
@@ -303,11 +312,11 @@ tailwind.config = {
 
     <!-- Agenda de sesiones (folleto oficial) -->
     <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-10">
-      <div class="bg-rm-espresso text-white rounded-xl p-4 text-center"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 1</p><p class="font-serif font-semibold text-lg leading-tight">Jue 2 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">El negocio</p></div>
-      <div class="bg-rm-espresso text-white rounded-xl p-4 text-center"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 2</p><p class="font-serif font-semibold text-lg leading-tight">Lun 6 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">Payoff &amp; pricing</p></div>
-      <div class="bg-rm-espresso text-white rounded-xl p-4 text-center"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 3</p><p class="font-serif font-semibold text-lg leading-tight">Mar 7 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">Hedging &amp; risk</p></div>
-      <div class="bg-rm-espresso text-white rounded-xl p-4 text-center"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 4</p><p class="font-serif font-semibold text-lg leading-tight">Jue 9 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">Distribución</p></div>
-      <div class="bg-rm-espresso text-white rounded-xl p-4 text-center col-span-2 md:col-span-1"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 5</p><p class="font-serif font-semibold text-lg leading-tight">Lun 13 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">Capstone cross-asset</p></div>
+      <div class="bg-rm-espresso text-white rounded-xl p-4 text-center"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 1</p><p class="font-serif font-semibold text-lg leading-tight">Lun 6 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">El negocio</p></div>
+      <div class="bg-rm-espresso text-white rounded-xl p-4 text-center"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 2</p><p class="font-serif font-semibold text-lg leading-tight">Mar 7 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">Payoff &amp; pricing</p></div>
+      <div class="bg-rm-espresso text-white rounded-xl p-4 text-center"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 3</p><p class="font-serif font-semibold text-lg leading-tight">Jue 9 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">Hedging &amp; risk</p></div>
+      <div class="bg-rm-espresso text-white rounded-xl p-4 text-center"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 4</p><p class="font-serif font-semibold text-lg leading-tight">Lun 13 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">Distribución</p></div>
+      <div class="bg-rm-espresso text-white rounded-xl p-4 text-center col-span-2 md:col-span-1"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 5</p><p class="font-serif font-semibold text-lg leading-tight">Mar 14 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">Capstone cross-asset</p></div>
     </div>
 
     <div class="space-y-4">
@@ -315,7 +324,7 @@ tailwind.config = {
       <details class="mod bg-white border border-rm-sand rounded-2xl overflow-hidden shadow-sm" open>
         <summary class="p-6 flex justify-between items-start gap-4 hover:bg-rm-cream/60 transition">
           <div>
-            <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 01 · El negocio <span class="text-rm-muted normal-case tracking-normal">· Sesión 1 · Jueves 2 de julio · 7:00–9:00 pm</span></p>
+            <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 01 · El negocio <span class="text-rm-muted normal-case tracking-normal">· Sesión 1 · Lunes 6 de julio · 7:00–9:00 pm</span></p>
             <h4 class="font-serif font-semibold text-rm-ink text-xl md:text-2xl leading-snug">La industria global de Notas Estructuradas como línea de negocio</h4>
           </div>
           <span class="chev text-rm-copper text-3xl font-light leading-none mt-1">+</span>
@@ -342,7 +351,7 @@ tailwind.config = {
       <details class="mod bg-white border border-rm-sand rounded-2xl overflow-hidden shadow-sm">
         <summary class="p-6 flex justify-between items-start gap-4 hover:bg-rm-cream/60 transition">
           <div>
-            <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 02 · Engineer the payoff <span class="text-rm-muted normal-case tracking-normal">· Sesión 2 · Lunes 6 de julio · 7:00–9:00 pm</span></p>
+            <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 02 · Engineer the payoff <span class="text-rm-muted normal-case tracking-normal">· Sesión 2 · Martes 7 de julio · 7:00–9:00 pm</span></p>
             <h4 class="font-serif font-semibold text-rm-ink text-xl md:text-2xl leading-snug">Payoff engineering, term sheets y pricing profesional</h4>
           </div>
           <span class="chev text-rm-copper text-3xl font-light leading-none mt-1">+</span>
@@ -369,7 +378,7 @@ tailwind.config = {
       <details class="mod bg-white border border-rm-sand rounded-2xl overflow-hidden shadow-sm">
         <summary class="p-6 flex justify-between items-start gap-4 hover:bg-rm-cream/60 transition">
           <div>
-            <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 03 · Administra el riesgo <span class="text-rm-muted normal-case tracking-normal">· Sesión 3 · Martes 7 de julio · 7:00–9:00 pm</span></p>
+            <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 03 · Administra el riesgo <span class="text-rm-muted normal-case tracking-normal">· Sesión 3 · Jueves 9 de julio · 7:00–9:00 pm</span></p>
             <h4 class="font-serif font-semibold text-rm-ink text-xl md:text-2xl leading-snug">Hedging, Risk &amp; lifecycle management</h4>
           </div>
           <span class="chev text-rm-copper text-3xl font-light leading-none mt-1">+</span>
@@ -396,7 +405,7 @@ tailwind.config = {
       <details class="mod bg-white border border-rm-sand rounded-2xl overflow-hidden shadow-sm">
         <summary class="p-6 flex justify-between items-start gap-4 hover:bg-rm-cream/60 transition">
           <div>
-            <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 04 · Dilo con claridad <span class="text-rm-muted normal-case tracking-normal">· Sesión 4 · Jueves 9 de julio · 7:00–9:00 pm</span></p>
+            <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 04 · Dilo con claridad <span class="text-rm-muted normal-case tracking-normal">· Sesión 4 · Lunes 13 de julio · 7:00–9:00 pm</span></p>
             <h4 class="font-serif font-semibold text-rm-ink text-xl md:text-2xl leading-snug">Distribución estratégica y la conversación con Wealth &amp; IB</h4>
           </div>
           <span class="chev text-rm-copper text-3xl font-light leading-none mt-1">+</span>
@@ -423,7 +432,7 @@ tailwind.config = {
       <details class="mod bg-white border border-rm-sand rounded-2xl overflow-hidden shadow-sm">
         <summary class="p-6 flex justify-between items-start gap-4 hover:bg-rm-cream/60 transition">
           <div>
-            <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 05 · Demuéstralo <span class="text-rm-muted normal-case tracking-normal">· Sesión 5 · Lunes 13 de julio · 7:00–9:00 pm</span></p>
+            <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 05 · Demuéstralo <span class="text-rm-muted normal-case tracking-normal">· Sesión 5 · Martes 14 de julio · 7:00–9:00 pm</span></p>
             <h4 class="font-serif font-semibold text-rm-ink text-xl md:text-2xl leading-snug">Capstone cross-asset: originar, estructurar y vender</h4>
           </div>
           <span class="chev text-rm-copper text-3xl font-light leading-none mt-1">+</span>
@@ -506,7 +515,7 @@ tailwind.config = {
     <div class="bg-gradient-to-r from-rm-copper2 to-rm-copper rounded-3xl p-8 md:p-10 text-[#2a1003] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-[0_20px_60px_rgba(194,96,58,.35)]">
       <div>
         <p class="text-xs font-bold uppercase tracking-[0.22em] mb-2">Cupo limitado · Formato ejecutivo</p>
-        <h4 class="font-serif text-2xl md:text-3xl font-semibold leading-snug">Inicio: 2 de julio de 2026 — 5 sesiones live (2, 6, 7, 9 y 13 de julio · 7:00–9:00 pm CDMX)</h4>
+        <h4 class="font-serif text-2xl md:text-3xl font-semibold leading-snug">Inicio: 6 de julio de 2026 — 5 sesiones live (6, 7, 9, 13 y 14 de julio · 7:00–9:00 pm CDMX)</h4>
         <p class="text-sm mt-2 font-medium opacity-90">Los grupos ejecutivos se cierran al llenarse el cupo. Reserva tu lugar hoy.</p>
       </div>
       <a href="#rm-enroll" class="flex-none bg-rm-espresso text-white font-bold px-8 py-4 rounded-full hover:bg-rm-deep hover:-translate-y-0.5 transition shadow-lg whitespace-nowrap">Reservar mi lugar →</a>
@@ -521,7 +530,9 @@ tailwind.config = {
     <div style="text-align:center;margin-bottom:28px;">
       <div style="color:#d98e5e;letter-spacing:3px;font-size:12px;font-weight:700;">INSCRIPCIÓN · CUPO LIMITADO</div>
       <h2 style="font-size:34px;margin:12px 0 8px;font-weight:800;line-height:1.15;font-family:'Poppins',sans-serif;">Asegura tu lugar</h2>
-      <p style="color:#e0cdb9;font-size:16px;margin:0;">Déjanos tus datos, verifica tu WhatsApp y recibe el temario completo. Sin compromiso.</p>
+      <div style="width:50px;height:2px;background:#d98e5e;margin:14px auto 16px;"></div>
+      <p style="color:#e0cdb9;font-size:16px;margin:0;font-style:italic;">Déjanos tus datos, verifica tu WhatsApp y recibe el temario completo. Sin compromiso.</p>
+      <p style="color:#c4ad97;font-size:13px;margin:10px 0 0;">Inicio 6 de julio 2026 · 5 sesiones live · 7:00–9:00 pm CDMX</p>
     </div>
     <div style="background:#fff;color:#1f2937;border-radius:18px;padding:32px;box-shadow:0 30px 70px rgba(0,0,0,.3);">
       <form id="rm-lead" onsubmit="return rmSubmit(event)" style="display:grid;gap:12px;">
