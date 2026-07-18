@@ -3,628 +3,628 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Structured Notes &amp; Cross-Asset Solutions — Programa Ejecutivo | RiskMathics Financial Institute</title>
+<title>Structured Notes &amp; Cross-Asset Solutions, Programa Ejecutivo | RiskMathics Financial Institute</title>
 <meta name="description" content="Programa ejecutivo de Notas Estructuradas: originación, pricing, hedging y distribución estratégica cross-asset. 5 clases · 10 horas · Virtual Live · Próxima edición 2026, fechas por anunciar. Impartido por Gisela Flores (18+ años front office). RiskMathics Financial Institute.">
 
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com"></script>
 <!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<!-- Google Fonts: Poppins (display / headers) + Lora (body) — tipografía de marca RiskMathics -->
+<!-- Google Fonts: Poppins (display / headers) + Lora (body), tipografía de marca RiskMathics -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
 <script>
 tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        rm: {
-          ink: '#1f120b',
-          espresso: '#2a1810',
-          espresso2: '#3d2417',
-          deep: '#170d08',
-          copper: '#c2603a',
-          copper2: '#d98e5e',
-          cream: '#faf6f1',
-          sand: '#ece3da',
-          muted: '#7a6253'
-        }
-      },
-      fontFamily: {
-        sans: ['Lora', 'Georgia', 'serif'],
-        serif: ['Poppins', 'system-ui', 'sans-serif'],
-        display: ['Poppins', 'sans-serif'],
-        body: ['Lora', 'Georgia', 'serif']
-      }
-    }
-  }
+ theme: {
+ extend: {
+ colors: {
+ rm: {
+ ink: '#1f120b',
+ espresso: '#2a1810',
+ espresso2: '#3d2417',
+ deep: '#170d08',
+ copper: '#c2603a',
+ copper2: '#d98e5e',
+ cream: '#faf6f1',
+ sand: '#ece3da',
+ muted: '#7a6253'
+ }
+ },
+ fontFamily: {
+ sans: ['Lora', 'Georgia', 'serif'],
+ serif: ['Poppins', 'system-ui', 'sans-serif'],
+ display: ['Poppins', 'sans-serif'],
+ body: ['Lora', 'Georgia', 'serif']
+ }
+ }
+ }
 }
 </script>
 
 <style>
-  /* Tipografía de marca: Poppins (headers/títulos/CTAs) + Lora (cuerpo) */
-  body { background-color:#faf6f1; color:#1f120b; -webkit-font-smoothing:antialiased; font-family:'Lora',Georgia,serif; }
-  h1,h2,h3,h4,h5,h6 { font-family:'Poppins',system-ui,sans-serif; }
-  nav, nav a, button, .font-serif { font-family:'Poppins',system-ui,sans-serif; }
-  a[href="#rm-enroll"] { font-family:'Poppins',system-ui,sans-serif; }
-  #rm-enroll button, #rm-enroll a { font-family:'Poppins',system-ui,sans-serif; }
-  html { scroll-behavior:smooth; }
+ /* Tipografía de marca: Poppins (headers/títulos/CTAs) + Lora (cuerpo) */
+ body { background-color:#faf6f1; color:#1f120b; -webkit-font-smoothing:antialiased; font-family:'Lora',Georgia,serif; }
+ h1,h2,h3,h4,h5,h6 { font-family:'Poppins',system-ui,sans-serif; }
+ nav, nav a, button, .font-serif { font-family:'Poppins',system-ui,sans-serif; }
+ a[href="#rm-enroll"] { font-family:'Poppins',system-ui,sans-serif; }
+ #rm-enroll button, #rm-enroll a { font-family:'Poppins',system-ui,sans-serif; }
+ html { scroll-behavior:smooth; }
 
-  .chart-container {
-    position:relative; width:100%; max-width:960px; margin:0 auto;
-    height:42vh; max-height:460px; min-height:280px;
-    background:#fff; border:1px solid #ece3da; border-radius:1rem;
-    padding:1.25rem; box-shadow:0 20px 50px rgba(42,24,16,.07);
-  }
-  @media (max-width:768px){ .chart-container{ height:34vh; padding:.75rem; } }
+ .chart-container {
+ position:relative; width:100%; max-width:960px; margin:0 auto;
+ height:42vh; max-height:460px; min-height:280px;
+ background:#fff; border:1px solid #ece3da; border-radius:1rem;
+ padding:1.25rem; box-shadow:0 20px 50px rgba(42,24,16,.07);
+ }
+ @media (max-width:768px){ .chart-container{ height:34vh; padding:.75rem; } }
 
-  ::-webkit-scrollbar{ width:6px; }
-  ::-webkit-scrollbar-track{ background:#f1ece5; }
-  ::-webkit-scrollbar-thumb{ background:#c2603a; border-radius:10px; }
+ ::-webkit-scrollbar{ width:6px; }
+ ::-webkit-scrollbar-track{ background:#f1ece5; }
+ ::-webkit-scrollbar-thumb{ background:#c2603a; border-radius:10px; }
 
-  details.mod > summary { list-style:none; cursor:pointer; }
-  details.mod > summary::-webkit-details-marker { display:none; }
-  details.mod > summary .chev { transition:transform .3s ease; }
-  details.mod[open] > summary .chev { transform:rotate(45deg); }
-  details.mod[open] { background:#fff; }
+ details.mod > summary { list-style:none; cursor:pointer; }
+ details.mod > summary::-webkit-details-marker { display:none; }
+ details.mod > summary .chev { transition:transform .3s ease; }
+ details.mod[open] > summary .chev { transform:rotate(45deg); }
+ details.mod[open] { background:#fff; }
 
-  .reveal { opacity:0; transform:translateY(18px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
-  .reveal.in { opacity:1; transform:none; }
+ .reveal { opacity:0; transform:translateY(18px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+ .reveal.in { opacity:1; transform:none; }
 
-  .matrix-row:hover td { background-color:#fdf9f4; }
+ .matrix-row:hover td { background-color:#fdf9f4; }
 
-  /* Motivo signature RiskMathics: línea de acento 50px × 2px */
-  .rm-accent-line { width:50px; height:2px; background:#c2603a; margin:18px auto 0; }
-  .rm-accent-line--left { margin:18px 0 0; }
+ /* Motivo signature RiskMathics: línea de acento 50px × 2px */
+ .rm-accent-line { width:50px; height:2px; background:#c2603a; margin:18px auto 0; }
+ .rm-accent-line--left { margin:18px 0 0; }
 
-  /* Nav: botones con aire, nunca encimados (regla de Allan) */
-  nav .rm-nav-cta, nav a { white-space:nowrap; }
+ /* Nav: botones con aire, nunca encimados (regla de Allan) */
+ nav .rm-nav-cta, nav a { white-space:nowrap; }
 </style>
 </head>
 <body class="font-sans">
 
 <!-- ===== Sticky Nav ===== -->
 <nav class="sticky top-0 z-50 backdrop-blur-md bg-rm-espresso/90 text-white border-b border-rm-copper/30 shadow-lg">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center gap-4 h-16">
-      <span class="font-serif font-semibold tracking-tight text-lg whitespace-nowrap">RISKMATHICS <span class="text-rm-copper2">|</span> <span class="hidden sm:inline">STRUCTURED NOTES 2026</span><span class="sm:hidden">SN 2026</span></span>
-      <div class="hidden lg:flex items-center gap-6 text-sm font-medium">
-        <a href="#abstract" class="hover:text-rm-copper2 transition">Overview</a>
-        <a href="#audiencia" class="hover:text-rm-copper2 transition">Para quién</a>
-        <a href="#curriculum" class="hover:text-rm-copper2 transition">Curriculum</a>
-        <a href="#faculty" class="hover:text-rm-copper2 transition">Faculty</a>
-      </div>
-      <div class="flex items-center gap-4">
-        <a href="#rm-enroll" class="rm-nav-cta hidden md:inline-flex items-center justify-center whitespace-nowrap border border-rm-copper2/60 text-rm-copper2 text-sm font-bold rounded-full hover:bg-rm-copper2/10 transition" style="padding:10px 22px;">Quiero el temario</a>
-        <a href="#rm-enroll" class="rm-nav-cta inline-flex items-center justify-center whitespace-nowrap bg-gradient-to-br from-rm-copper2 to-rm-copper text-[#2a1003] text-sm font-bold rounded-full hover:-translate-y-0.5 transition shadow-md" style="padding:10px 22px;">Inscribirme</a>
-      </div>
-    </div>
-  </div>
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div class="flex justify-between items-center gap-4 h-16">
+ <span class="font-serif font-semibold tracking-tight text-lg whitespace-nowrap">RISKMATHICS <span class="text-rm-copper2">|</span> <span class="hidden sm:inline">STRUCTURED NOTES 2026</span><span class="sm:hidden">SN 2026</span></span>
+ <div class="hidden lg:flex items-center gap-6 text-sm font-medium">
+ <a href="#abstract" class="hover:text-rm-copper2 transition">Overview</a>
+ <a href="#audiencia" class="hover:text-rm-copper2 transition">Para quién</a>
+ <a href="#curriculum" class="hover:text-rm-copper2 transition">Curriculum</a>
+ <a href="#faculty" class="hover:text-rm-copper2 transition">Faculty</a>
+ </div>
+ <div class="flex items-center gap-4">
+ <a href="#rm-enroll" class="rm-nav-cta hidden md:inline-flex items-center justify-center whitespace-nowrap border border-rm-copper2/60 text-rm-copper2 text-sm font-bold rounded-full hover:bg-rm-copper2/10 transition" style="padding:10px 22px;">Quiero el temario</a>
+ <a href="#rm-enroll" class="rm-nav-cta inline-flex items-center justify-center whitespace-nowrap bg-gradient-to-br from-rm-copper2 to-rm-copper text-[#2a1003] text-sm font-bold rounded-full hover:-translate-y-0.5 transition shadow-md" style="padding:10px 22px;">Inscribirme</a>
+ </div>
+ </div>
+ </div>
 </nav>
 
 <!-- ===== Hero ===== -->
 <header class="bg-gradient-to-br from-rm-espresso2 via-rm-espresso to-rm-deep text-white relative overflow-hidden border-b-4 border-rm-copper">
-  <div class="absolute inset-0 opacity-[0.07] bg-[radial-gradient(ellipse_at_top_right,#d98e5e,transparent_60%)]"></div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative z-10">
-    <div class="flex flex-wrap items-center gap-3 mb-6">
-      <span class="inline-flex items-center gap-2 text-rm-copper2 font-bold tracking-[0.22em] text-xs uppercase"><span class="w-6 h-px bg-rm-copper inline-block"></span>Programa Ejecutivo · RiskMathics Financial Institute</span>
-      <span class="bg-white/10 border border-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full">Virtual · Live</span>
-    </div>
-    <h1 class="font-serif font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight max-w-4xl">
-      Structured Notes<br>&amp; Cross-Asset Solutions
-    </h1>
-    <div class="rm-accent-line rm-accent-line--left"></div>
-    <p class="mt-6 text-lg md:text-2xl text-[#e8d8c8] font-light max-w-3xl leading-relaxed">
-      Originación · Pricing · Hedging · Distribución Estratégica.<br class="hidden md:block">
-      <span class="text-white font-medium">Engineer the payoff. Defiende el pricing.</span> Habla con la mesa, con riesgo y con el cliente en la misma frase.
-    </p>
-    <div class="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm text-[#c4ad97]">
-      <span><b class="text-white font-semibold">Próxima edición</b> · fechas por anunciar</span>
-      <span><b class="text-white font-semibold">Sesiones</b> · 5 live · 7:00–9:00 pm CDMX</span>
-      <span><b class="text-white font-semibold">Horario</b> · 7:00–9:00 pm CDMX</span>
-      <span><b class="text-white font-semibold">Formato</b> · 5 clases · 10 horas</span>
-    </div>
-    <div class="mt-10 flex flex-wrap items-center gap-4">
-      <a href="#rm-enroll" class="inline-flex items-center justify-center whitespace-nowrap bg-gradient-to-br from-rm-copper2 to-rm-copper text-[#2a1003] font-bold px-8 py-4 rounded-full text-base shadow-[0_8px_30px_rgba(194,96,58,.38)] hover:-translate-y-0.5 hover:shadow-[0_12px_38px_rgba(194,96,58,.5)] transition">Quiero el temario</a>
-      <a href="#rm-enroll" class="inline-flex items-center justify-center whitespace-nowrap bg-white/10 border border-white/25 text-white font-semibold px-8 py-4 rounded-full text-base hover:bg-white/15 transition">Inscribirme ahora</a>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/15 pt-8 mt-14">
-      <div><p class="text-3xl md:text-4xl font-serif font-semibold text-rm-copper2">5</p><p class="text-xs text-[#c4ad97] uppercase tracking-wider mt-1">Módulos · workflow completo</p></div>
-      <div><p class="text-3xl md:text-4xl font-serif font-semibold text-rm-copper2">10</p><p class="text-xs text-[#c4ad97] uppercase tracking-wider mt-1">Horas ejecutivas live</p></div>
-      <div><p class="text-3xl md:text-4xl font-serif font-semibold text-rm-copper2">3</p><p class="text-xs text-[#c4ad97] uppercase tracking-wider mt-1">Casos capstone cross-asset</p></div>
-      <div><p class="text-3xl md:text-4xl font-serif font-semibold text-rm-copper2">18+</p><p class="text-xs text-[#c4ad97] uppercase tracking-wider mt-1">Años front office · faculty</p></div>
-    </div>
-  </div>
+ <div class="absolute inset-0 opacity-[0.07] bg-[radial-gradient(ellipse_at_top_right,#d98e5e,transparent_60%)]"></div>
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative z-10">
+ <div class="flex flex-wrap items-center gap-3 mb-6">
+ <span class="inline-flex items-center gap-2 text-rm-copper2 font-bold tracking-[0.22em] text-xs uppercase"><span class="w-6 h-px bg-rm-copper inline-block"></span>Programa Ejecutivo · RiskMathics Financial Institute</span>
+ <span class="bg-white/10 border border-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full">Virtual · Live</span>
+ </div>
+ <h1 class="font-serif font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight max-w-4xl">
+ Structured Notes<br>&amp; Cross-Asset Solutions
+ </h1>
+ <div class="rm-accent-line rm-accent-line--left"></div>
+ <p class="mt-6 text-lg md:text-2xl text-[#e8d8c8] font-light max-w-3xl leading-relaxed">
+ Originación · Pricing · Hedging · Distribución Estratégica.<br class="hidden md:block">
+ <span class="text-white font-medium">Engineer the payoff. Defiende el pricing.</span> Habla con la mesa, con riesgo y con el cliente en la misma frase.
+ </p>
+ <div class="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm text-[#c4ad97]">
+ <span><b class="text-white font-semibold">Próxima edición</b> · fechas por anunciar</span>
+ <span><b class="text-white font-semibold">Sesiones</b> · 5 live · 7:00–9:00 pm CDMX</span>
+ <span><b class="text-white font-semibold">Horario</b> · 7:00–9:00 pm CDMX</span>
+ <span><b class="text-white font-semibold">Formato</b> · 5 clases · 10 horas</span>
+ </div>
+ <div class="mt-10 flex flex-wrap items-center gap-4">
+ <a href="#rm-enroll" class="inline-flex items-center justify-center whitespace-nowrap bg-gradient-to-br from-rm-copper2 to-rm-copper text-[#2a1003] font-bold px-8 py-4 rounded-full text-base shadow-[0_8px_30px_rgba(194,96,58,.38)] hover:-translate-y-0.5 hover:shadow-[0_12px_38px_rgba(194,96,58,.5)] transition">Quiero el temario</a>
+ <a href="#rm-enroll" class="inline-flex items-center justify-center whitespace-nowrap bg-white/10 border border-white/25 text-white font-semibold px-8 py-4 rounded-full text-base hover:bg-white/15 transition">Inscribirme ahora</a>
+ </div>
+ <div class="grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/15 pt-8 mt-14">
+ <div><p class="text-3xl md:text-4xl font-serif font-semibold text-rm-copper2">5</p><p class="text-xs text-[#c4ad97] uppercase tracking-wider mt-1">Módulos · workflow completo</p></div>
+ <div><p class="text-3xl md:text-4xl font-serif font-semibold text-rm-copper2">10</p><p class="text-xs text-[#c4ad97] uppercase tracking-wider mt-1">Horas ejecutivas live</p></div>
+ <div><p class="text-3xl md:text-4xl font-serif font-semibold text-rm-copper2">3</p><p class="text-xs text-[#c4ad97] uppercase tracking-wider mt-1">Casos capstone cross-asset</p></div>
+ <div><p class="text-3xl md:text-4xl font-serif font-semibold text-rm-copper2">18+</p><p class="text-xs text-[#c4ad97] uppercase tracking-wider mt-1">Años front office · faculty</p></div>
+ </div>
+ </div>
 </header>
 
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
 
-  <!-- ===== Executive Summary ===== -->
-  <section id="abstract" class="mb-20 md:mb-28 reveal">
-    <h2 class="text-xs font-bold text-rm-copper uppercase tracking-[0.22em] mb-3">Program Overview</h2>
-    <h3 class="font-serif text-3xl md:text-4xl text-rm-ink font-semibold mb-8 border-l-4 border-rm-copper pl-5 max-w-3xl leading-tight">Un elemento crítico para Global Markets, Investment Banking y Private Wealth Management</h3>
-    <div class="bg-white p-7 md:p-10 rounded-2xl shadow-sm border border-rm-sand text-[#4a4036] space-y-6 leading-relaxed text-[15.5px] md:text-base">
-      <p>
-        Durante los últimos veinte años, las notas estructuradas pasaron de ser soluciones de nicho a una <b class="text-rm-ink">capacidad estratégica</b> en la intersección de Global Markets, structuring, derivatives sales, investment banking y private wealth. Hoy, el verdadero diferencial no consiste en conocer un payoff aislado, sino en <b class="text-rm-ink">originar una oportunidad, convertirla en estructura ejecutable, defender su pricing, mapear su hedge, documentar su emisión</b> y traducirla en una narrativa comercial honesta para wealth, family offices e inversionistas sofisticados.
-      </p>
-      <p>
-        Este programa fue diseñado exactamente para esa intersección: forma banqueros y estructuradores que pueden hablar con la mesa, con el comité de riesgos y con el cliente <b class="text-rm-ink">en el mismo idioma</b>. El enfoque recorre el workflow real del front office — <span class="text-rm-copper font-semibold">Origination → Structuring → Pricing → Hedging → Distribution</span> — con la disciplina cuantitativa del producto, su gestión de riesgo y su traducción comercial, regulatoria y patrimonial.
-      </p>
-      <p class="bg-rm-cream border-l-4 border-rm-copper p-5 rounded-r-xl italic text-rm-espresso font-serif text-lg">
-        “Structured products are where creativity meets quant — tailored returns for tailored visions.”
-      </p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2 not-italic">
-        <div class="border border-rm-sand rounded-xl p-4"><p class="text-[11px] uppercase tracking-widest text-rm-muted font-bold mb-1">Formato</p><p class="text-sm text-rm-ink font-semibold">Programa ejecutivo · 5 clases · 10 horas</p></div>
-        <div class="border border-rm-sand rounded-xl p-4"><p class="text-[11px] uppercase tracking-widest text-rm-muted font-bold mb-1">Modalidad</p><p class="text-sm text-rm-ink font-semibold">Virtual live, private cohort o in-company</p></div>
-        <div class="border border-rm-sand rounded-xl p-4"><p class="text-[11px] uppercase tracking-widest text-rm-muted font-bold mb-1">Diseñado para</p><p class="text-sm text-rm-ink font-semibold">IB, structuring, derivatives, wealth, treasuries y family offices</p></div>
-        <div class="border border-rm-sand rounded-xl p-4"><p class="text-[11px] uppercase tracking-widest text-rm-muted font-bold mb-1">Resultado</p><p class="text-sm text-rm-ink font-semibold">Diseñar, defender y vender soluciones cross-asset</p></div>
-      </div>
-    </div>
-  </section>
+ <!-- ===== Executive Summary ===== -->
+ <section id="abstract" class="mb-20 md:mb-28 reveal">
+ <h2 class="text-xs font-bold text-rm-copper uppercase tracking-[0.22em] mb-3">Program Overview</h2>
+ <h3 class="font-serif text-3xl md:text-4xl text-rm-ink font-semibold mb-8 border-l-4 border-rm-copper pl-5 max-w-3xl leading-tight">Un elemento crítico para Global Markets, Investment Banking y Private Wealth Management</h3>
+ <div class="bg-white p-7 md:p-10 rounded-2xl shadow-sm border border-rm-sand text-[#4a4036] space-y-6 leading-relaxed text-[15.5px] md:text-base">
+ <p>
+ Durante los últimos veinte años, las notas estructuradas pasaron de ser soluciones de nicho a una <b class="text-rm-ink">capacidad estratégica</b> en la intersección de Global Markets, structuring, derivatives sales, investment banking y private wealth. Hoy, el verdadero diferencial no consiste en conocer un payoff aislado, sino en <b class="text-rm-ink">originar una oportunidad, convertirla en estructura ejecutable, defender su pricing, mapear su hedge, documentar su emisión</b> y traducirla en una narrativa comercial honesta para wealth, family offices e inversionistas sofisticados.
+ </p>
+ <p>
+ Este programa fue diseñado exactamente para esa intersección: forma banqueros y estructuradores que pueden hablar con la mesa, con el comité de riesgos y con el cliente <b class="text-rm-ink">en el mismo idioma</b>. El enfoque recorre el workflow real del front office, <span class="text-rm-copper font-semibold">Origination → Structuring → Pricing → Hedging → Distribution</span>, con la disciplina cuantitativa del producto, su gestión de riesgo y su traducción comercial, regulatoria y patrimonial.
+ </p>
+ <p class="bg-rm-cream border-l-4 border-rm-copper p-5 rounded-r-xl italic text-rm-espresso font-serif text-lg">
+ “Structured products are where creativity meets quant, tailored returns for tailored visions.”
+ </p>
+ <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2 not-italic">
+ <div class="border border-rm-sand rounded-xl p-4"><p class="text-[11px] uppercase tracking-widest text-rm-muted font-bold mb-1">Formato</p><p class="text-sm text-rm-ink font-semibold">Programa ejecutivo · 5 clases · 10 horas</p></div>
+ <div class="border border-rm-sand rounded-xl p-4"><p class="text-[11px] uppercase tracking-widest text-rm-muted font-bold mb-1">Modalidad</p><p class="text-sm text-rm-ink font-semibold">Virtual live, private cohort o in-company</p></div>
+ <div class="border border-rm-sand rounded-xl p-4"><p class="text-[11px] uppercase tracking-widest text-rm-muted font-bold mb-1">Diseñado para</p><p class="text-sm text-rm-ink font-semibold">IB, structuring, derivatives, wealth, treasuries y family offices</p></div>
+ <div class="border border-rm-sand rounded-xl p-4"><p class="text-[11px] uppercase tracking-widest text-rm-muted font-bold mb-1">Resultado</p><p class="text-sm text-rm-ink font-semibold">Diseñar, defender y vender soluciones cross-asset</p></div>
+ </div>
+ </div>
+ </section>
 
-  <!-- ===== Objetivo Global ===== -->
-  <section id="objetivo" class="mb-20 md:mb-28 reveal">
-    <div class="bg-gradient-to-br from-rm-espresso2 to-rm-deep text-white rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden border border-rm-copper/30">
-      <div class="absolute top-0 right-0 -mt-6 -mr-2 text-rm-copper opacity-10 text-[10rem] font-serif leading-none select-none">”</div>
-      <h2 class="text-xs font-bold text-rm-copper2 uppercase tracking-[0.22em] mb-5">Objetivo general de aprendizaje</h2>
-      <p class="font-serif text-2xl md:text-3xl leading-relaxed mb-6 max-w-4xl">
-        Al finalizar el programa, el participante será capaz de <span class="text-rm-copper2">originar, estructurar, pricear, hedgear y posicionar comercialmente</span> notas estructuradas y soluciones cross-asset en mercados públicos y privados.
-      </p>
-      <p class="text-[#e0cdb9] font-light text-base md:text-lg max-w-4xl mb-10">
-        Entendiendo al mismo tiempo la lógica cuantitativa del producto, su disciplina de riesgo y su traducción comercial, regulatoria y patrimonial para clientes institucionales y de alto patrimonio.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <div class="bg-white/[0.06] border border-white/10 rounded-2xl p-6">
-          <p class="text-rm-copper2 font-serif text-2xl font-semibold mb-2">01 · Origination</p>
-          <p class="text-sm text-[#e0cdb9] leading-relaxed">Convertir una necesidad de cliente, una view de mercado o un mandato de balance sheet en una oportunidad concreta de structuring.</p>
-        </div>
-        <div class="bg-white/[0.06] border border-white/10 rounded-2xl p-6">
-          <p class="text-rm-copper2 font-serif text-2xl font-semibold mb-2">02 · Engineering</p>
-          <p class="text-sm text-[#e0cdb9] leading-relaxed">Diseñar payoffs, term sheets y economics con sensibilidad a curvas, vol, skew, dividendos, correlación y crédito del emisor.</p>
-        </div>
-        <div class="bg-white/[0.06] border border-white/10 rounded-2xl p-6">
-          <p class="text-rm-copper2 font-serif text-2xl font-semibold mb-2">03 · Hedge &amp; Risk</p>
-          <p class="text-sm text-[#e0cdb9] leading-relaxed">Entender la lógica real de las “Griegas”, barrier risk, liquidity management, unwind y lifecycle management en la mesa.</p>
-        </div>
-        <div class="bg-white/[0.06] border border-white/10 rounded-2xl p-6">
-          <p class="text-rm-copper2 font-serif text-2xl font-semibold mb-2">04 · Distribution</p>
-          <p class="text-sm text-[#e0cdb9] leading-relaxed">Traducir complejidad en una conversación comercial clara para private wealth, family offices, treasuries e inversionistas sofisticados.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+ <!-- ===== Objetivo Global ===== -->
+ <section id="objetivo" class="mb-20 md:mb-28 reveal">
+ <div class="bg-gradient-to-br from-rm-espresso2 to-rm-deep text-white rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden border border-rm-copper/30">
+ <div class="absolute top-0 right-0 -mt-6 -mr-2 text-rm-copper opacity-10 text-[10rem] font-serif leading-none select-none">”</div>
+ <h2 class="text-xs font-bold text-rm-copper2 uppercase tracking-[0.22em] mb-5">Objetivo general de aprendizaje</h2>
+ <p class="font-serif text-2xl md:text-3xl leading-relaxed mb-6 max-w-4xl">
+ Al finalizar el programa, el participante será capaz de <span class="text-rm-copper2">originar, estructurar, pricear, hedgear y posicionar comercialmente</span> notas estructuradas y soluciones cross-asset en mercados públicos y privados.
+ </p>
+ <p class="text-[#e0cdb9] font-light text-base md:text-lg max-w-4xl mb-10">
+ Entendiendo al mismo tiempo la lógica cuantitativa del producto, su disciplina de riesgo y su traducción comercial, regulatoria y patrimonial para clientes institucionales y de alto patrimonio.
+ </p>
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+ <div class="bg-white/[0.06] border border-white/10 rounded-2xl p-6">
+ <p class="text-rm-copper2 font-serif text-2xl font-semibold mb-2">01 · Origination</p>
+ <p class="text-sm text-[#e0cdb9] leading-relaxed">Convertir una necesidad de cliente, una view de mercado o un mandato de balance sheet en una oportunidad concreta de structuring.</p>
+ </div>
+ <div class="bg-white/[0.06] border border-white/10 rounded-2xl p-6">
+ <p class="text-rm-copper2 font-serif text-2xl font-semibold mb-2">02 · Engineering</p>
+ <p class="text-sm text-[#e0cdb9] leading-relaxed">Diseñar payoffs, term sheets y economics con sensibilidad a curvas, vol, skew, dividendos, correlación y crédito del emisor.</p>
+ </div>
+ <div class="bg-white/[0.06] border border-white/10 rounded-2xl p-6">
+ <p class="text-rm-copper2 font-serif text-2xl font-semibold mb-2">03 · Hedge &amp; Risk</p>
+ <p class="text-sm text-[#e0cdb9] leading-relaxed">Entender la lógica real de las “Griegas”, barrier risk, liquidity management, unwind y lifecycle management en la mesa.</p>
+ </div>
+ <div class="bg-white/[0.06] border border-white/10 rounded-2xl p-6">
+ <p class="text-rm-copper2 font-serif text-2xl font-semibold mb-2">04 · Distribution</p>
+ <p class="text-sm text-[#e0cdb9] leading-relaxed">Traducir complejidad en una conversación comercial clara para private wealth, family offices, treasuries e inversionistas sofisticados.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-  <!-- ===== Por qué ahora + Chart ===== -->
-  <section id="mercado" class="mb-20 md:mb-28 reveal">
-    <h2 class="text-xs font-bold text-rm-copper uppercase tracking-[0.22em] mb-3">Market Context · Por qué ahora</h2>
-    <h3 class="font-serif text-3xl md:text-4xl text-rm-ink font-semibold mb-6 border-l-4 border-rm-copper pl-5 max-w-3xl leading-tight">De solución de nicho a línea de negocio estratégica</h3>
-    <p class="text-[#4a4036] mb-8 max-w-3xl leading-relaxed">
-      La demanda global de notas estructuradas ha crecido de forma sostenida: clientes de wealth e institucionales piden <b>yield, growth, protection, monetización de concentración y overlays de liquidez o divisa</b> — y las mesas que saben originar y defender esas soluciones capturan el margen. El que solo vende vanilla, compite por precio; el que estructura, compite por diseño.
-    </p>
-    <div class="chart-container">
-      <canvas id="snMarketChart"></canvas>
-    </div>
-    <p class="text-xs text-rm-muted text-center mt-3">Emisión global anual estimada de productos estructurados (USD miles de millones). Estimación ilustrativa elaborada por RiskMathics con base en datos públicos de la industria (SRP, emisores globales). No constituye cifra oficial.</p>
+ <!-- ===== Por qué ahora + Chart ===== -->
+ <section id="mercado" class="mb-20 md:mb-28 reveal">
+ <h2 class="text-xs font-bold text-rm-copper uppercase tracking-[0.22em] mb-3">Market Context · Por qué ahora</h2>
+ <h3 class="font-serif text-3xl md:text-4xl text-rm-ink font-semibold mb-6 border-l-4 border-rm-copper pl-5 max-w-3xl leading-tight">De solución de nicho a línea de negocio estratégica</h3>
+ <p class="text-[#4a4036] mb-8 max-w-3xl leading-relaxed">
+ La demanda global de notas estructuradas ha crecido de forma sostenida: clientes de wealth e institucionales piden <b>yield, growth, protection, monetización de concentración y overlays de liquidez o divisa</b>, y las mesas que saben originar y defender esas soluciones capturan el margen. El que solo vende vanilla, compite por precio; el que estructura, compite por diseño.
+ </p>
+ <div class="chart-container">
+ <canvas id="snMarketChart"></canvas>
+ </div>
+ <p class="text-xs text-rm-muted text-center mt-3">Emisión global anual estimada de productos estructurados (USD miles de millones). Estimación ilustrativa elaborada por RiskMathics con base en datos públicos de la industria (SRP, emisores globales). No constituye cifra oficial.</p>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
-      <div class="bg-white border border-rm-sand rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition">
-        <p class="font-serif text-rm-copper text-3xl font-semibold mb-2">→</p>
-        <h4 class="font-bold text-rm-ink mb-2">El diferencial ya no es vanilla</h4>
-        <p class="text-sm text-[#4a4036] leading-relaxed">Porque el diferencial hoy no es vender productos vanilla: es estructurar soluciones que respondan a la necesidad real del cliente.</p>
-      </div>
-      <div class="bg-white border border-rm-sand rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition">
-        <p class="font-serif text-rm-copper text-3xl font-semibold mb-2">→</p>
-        <h4 class="font-bold text-rm-ink mb-2">El pricing real cambia la conversación</h4>
-        <p class="text-sm text-[#4a4036] leading-relaxed">Entender el pricing real — estimated value, funding, crédito del emisor — cambia la calidad de tu conversación con la mesa y con el cliente.</p>
-      </div>
-      <div class="bg-white border border-rm-sand rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition">
-        <p class="font-serif text-rm-copper text-3xl font-semibold mb-2">→</p>
-        <h4 class="font-bold text-rm-ink mb-2">Structuring + distribución = ventaja</h4>
-        <p class="text-sm text-[#4a4036] leading-relaxed">Un buen structurer que entiende distribución diseña mejor; un buen banker que entiende hedge vende mejor.</p>
-      </div>
-    </div>
+ <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
+ <div class="bg-white border border-rm-sand rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition">
+ <p class="font-serif text-rm-copper text-3xl font-semibold mb-2">→</p>
+ <h4 class="font-bold text-rm-ink mb-2">El diferencial ya no es vanilla</h4>
+ <p class="text-sm text-[#4a4036] leading-relaxed">Porque el diferencial hoy no es vender productos vanilla: es estructurar soluciones que respondan a la necesidad real del cliente.</p>
+ </div>
+ <div class="bg-white border border-rm-sand rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition">
+ <p class="font-serif text-rm-copper text-3xl font-semibold mb-2">→</p>
+ <h4 class="font-bold text-rm-ink mb-2">El pricing real cambia la conversación</h4>
+ <p class="text-sm text-[#4a4036] leading-relaxed">Entender el pricing real, estimated value, funding, crédito del emisor, cambia la calidad de tu conversación con la mesa y con el cliente.</p>
+ </div>
+ <div class="bg-white border border-rm-sand rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition">
+ <p class="font-serif text-rm-copper text-3xl font-semibold mb-2">→</p>
+ <h4 class="font-bold text-rm-ink mb-2">Structuring + distribución = ventaja</h4>
+ <p class="text-sm text-[#4a4036] leading-relaxed">Un buen structurer que entiende distribución diseña mejor; un buen banker que entiende hedge vende mejor.</p>
+ </div>
+ </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
-      <div class="bg-rm-cream border border-rm-sand rounded-2xl p-6">
-        <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-2">Beneficio estratégico</p>
-        <p class="text-sm text-rm-ink font-medium leading-relaxed">Mayor capacidad de originación con emisores, inversionistas y equipos de wealth.</p>
-      </div>
-      <div class="bg-rm-cream border border-rm-sand rounded-2xl p-6">
-        <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-2">Beneficio estratégico</p>
-        <p class="text-sm text-rm-ink font-medium leading-relaxed">Mejor lectura de riesgos implícitos, estimated value, secondary liquidity e issuer risk.</p>
-      </div>
-      <div class="bg-rm-cream border border-rm-sand rounded-2xl p-6">
-        <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-2">Beneficio estratégico</p>
-        <p class="text-sm text-rm-ink font-medium leading-relaxed">Herramientas concretas para estructurar ideas ejecutables, hedgeables y colocables.</p>
-      </div>
-    </div>
-  </section>
+ <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
+ <div class="bg-rm-cream border border-rm-sand rounded-2xl p-6">
+ <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-2">Beneficio estratégico</p>
+ <p class="text-sm text-rm-ink font-medium leading-relaxed">Mayor capacidad de originación con emisores, inversionistas y equipos de wealth.</p>
+ </div>
+ <div class="bg-rm-cream border border-rm-sand rounded-2xl p-6">
+ <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-2">Beneficio estratégico</p>
+ <p class="text-sm text-rm-ink font-medium leading-relaxed">Mejor lectura de riesgos implícitos, estimated value, secondary liquidity e issuer risk.</p>
+ </div>
+ <div class="bg-rm-cream border border-rm-sand rounded-2xl p-6">
+ <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-2">Beneficio estratégico</p>
+ <p class="text-sm text-rm-ink font-medium leading-relaxed">Herramientas concretas para estructurar ideas ejecutables, hedgeables y colocables.</p>
+ </div>
+ </div>
+ </section>
 
-  <!-- ===== Audience Matrix ===== -->
-  <section id="audiencia" class="mb-20 md:mb-28 reveal">
-    <h2 class="text-xs font-bold text-rm-copper uppercase tracking-[0.22em] mb-3">Audience Matrix</h2>
-    <h3 class="font-serif text-3xl md:text-4xl text-rm-ink font-semibold mb-6 border-l-4 border-rm-copper pl-5 max-w-3xl leading-tight">Sectores, áreas y puestos clave para los que está diseñado</h3>
-    <p class="text-[#4a4036] mb-8 max-w-3xl leading-relaxed">El programa está diseñado para equipos que necesitan <b>hablar con la mesa y con el cliente en la misma frase</b>.</p>
-    <div class="overflow-x-auto shadow-sm border border-rm-sand rounded-2xl bg-white">
-      <table class="min-w-full text-sm text-left">
-        <thead class="bg-rm-espresso text-white">
-          <tr>
-            <th class="py-4 px-5 font-bold uppercase text-xs tracking-wider">Sector</th>
-            <th class="py-4 px-5 font-bold uppercase text-xs tracking-wider">Áreas</th>
-            <th class="py-4 px-5 font-bold uppercase text-xs tracking-wider">Puestos</th>
-            <th class="py-4 px-5 font-bold uppercase text-xs tracking-wider">Aplicación estratégica</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-rm-sand text-[#3a322a]">
-          <tr class="matrix-row transition">
-            <td class="py-4 px-5 font-bold text-rm-espresso align-top">Banca universal y de inversión</td>
-            <td class="py-4 px-5 align-top">Investment Banking · DCM / ECM · Global Markets</td>
-            <td class="py-4 px-5 align-top">Analyst, Associate, VP, Director, MD</td>
-            <td class="py-4 px-5 align-top">Originar soluciones bespoke, monetizar posiciones y estructurar emisiones vinculadas a equity, rates, FX o baskets.</td>
-          </tr>
-          <tr class="matrix-row transition">
-            <td class="py-4 px-5 font-bold text-rm-espresso align-top">Mesas de structuring y derivados</td>
-            <td class="py-4 px-5 align-top">Structured Products · Equity Derivatives · Rates / FX Derivatives</td>
-            <td class="py-4 px-5 align-top">Structurer, Trader, Sales, Desk Head</td>
-            <td class="py-4 px-5 align-top">Diseñar payoffs, validar economics y entender volatilidad, correlación, issuer spread y disciplina de hedge.</td>
-          </tr>
-          <tr class="matrix-row transition">
-            <td class="py-4 px-5 font-bold text-rm-espresso align-top">Private banking y wealth management</td>
-            <td class="py-4 px-5 align-top">Advisory · UHNW / Family Office · Open architecture</td>
-            <td class="py-4 px-5 align-top">Relationship Manager, Investment Counselor, Product Specialist</td>
-            <td class="py-4 px-5 align-top">Traducir estructuras complejas a narrativas de yield, growth, protection y monetización con disclosure claro.</td>
-          </tr>
-          <tr class="matrix-row transition">
-            <td class="py-4 px-5 font-bold text-rm-espresso align-top">Asset managers, aseguradoras y pensiones</td>
-            <td class="py-4 px-5 align-top">Multi-Asset · Insurance ALM · Portfolio Construction</td>
-            <td class="py-4 px-5 align-top">PM, CIO, Strategist, ALM Head</td>
-            <td class="py-4 px-5 align-top">Usar notas como overlays de income, convexidad, protección parcial y precisión táctica por mandato.</td>
-          </tr>
-          <tr class="matrix-row transition">
-            <td class="py-4 px-5 font-bold text-rm-espresso align-top">Sector corporativo</td>
-            <td class="py-4 px-5 align-top">Tesorería · Corporate Finance · Balance Sheet Management</td>
-            <td class="py-4 px-5 align-top">Treasurer, CFO, FP&amp;A, Finance Director</td>
-            <td class="py-4 px-5 align-top">Diseñar coberturas estructuradas, FX overlays, yield enhancement y soluciones para liquidez o posiciones concentradas.</td>
-          </tr>
-          <tr class="matrix-row transition">
-            <td class="py-4 px-5 font-bold text-rm-espresso align-top">Family offices y plataformas independientes</td>
-            <td class="py-4 px-5 align-top">Investment Office · Independent Advisors · Capital introduction</td>
-            <td class="py-4 px-5 align-top">CIO, Investment Committee, External Advisor</td>
-            <td class="py-4 px-5 align-top">Evaluar estructuras desde el lente de preservación patrimonial, income, downside shaping y disciplina de emisor.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
-      <div class="border border-rm-sand bg-white rounded-xl p-5"><p class="text-[11px] uppercase tracking-widest text-rm-muted font-bold mb-1">Requisito</p><p class="text-sm text-rm-ink">Formación económico-administrativa y/o financiera.</p></div>
-      <div class="border border-rm-sand bg-white rounded-xl p-5"><p class="text-[11px] uppercase tracking-widest text-rm-muted font-bold mb-1">Requisito</p><p class="text-sm text-rm-ink">Bases sólidas de matemáticas financieras.</p></div>
-      <div class="border border-rm-sand bg-white rounded-xl p-5"><p class="text-[11px] uppercase tracking-widest text-rm-muted font-bold mb-1">Deseable</p><p class="text-sm text-rm-ink">Experiencia en instituciones del medio financiero.</p></div>
-    </div>
-  </section>
+ <!-- ===== Audience Matrix ===== -->
+ <section id="audiencia" class="mb-20 md:mb-28 reveal">
+ <h2 class="text-xs font-bold text-rm-copper uppercase tracking-[0.22em] mb-3">Audience Matrix</h2>
+ <h3 class="font-serif text-3xl md:text-4xl text-rm-ink font-semibold mb-6 border-l-4 border-rm-copper pl-5 max-w-3xl leading-tight">Sectores, áreas y puestos clave para los que está diseñado</h3>
+ <p class="text-[#4a4036] mb-8 max-w-3xl leading-relaxed">El programa está diseñado para equipos que necesitan <b>hablar con la mesa y con el cliente en la misma frase</b>.</p>
+ <div class="overflow-x-auto shadow-sm border border-rm-sand rounded-2xl bg-white">
+ <table class="min-w-full text-sm text-left">
+ <thead class="bg-rm-espresso text-white">
+ <tr>
+ <th class="py-4 px-5 font-bold uppercase text-xs tracking-wider">Sector</th>
+ <th class="py-4 px-5 font-bold uppercase text-xs tracking-wider">Áreas</th>
+ <th class="py-4 px-5 font-bold uppercase text-xs tracking-wider">Puestos</th>
+ <th class="py-4 px-5 font-bold uppercase text-xs tracking-wider">Aplicación estratégica</th>
+ </tr>
+ </thead>
+ <tbody class="divide-y divide-rm-sand text-[#3a322a]">
+ <tr class="matrix-row transition">
+ <td class="py-4 px-5 font-bold text-rm-espresso align-top">Banca universal y de inversión</td>
+ <td class="py-4 px-5 align-top">Investment Banking · DCM / ECM · Global Markets</td>
+ <td class="py-4 px-5 align-top">Analyst, Associate, VP, Director, MD</td>
+ <td class="py-4 px-5 align-top">Originar soluciones bespoke, monetizar posiciones y estructurar emisiones vinculadas a equity, rates, FX o baskets.</td>
+ </tr>
+ <tr class="matrix-row transition">
+ <td class="py-4 px-5 font-bold text-rm-espresso align-top">Mesas de structuring y derivados</td>
+ <td class="py-4 px-5 align-top">Structured Products · Equity Derivatives · Rates / FX Derivatives</td>
+ <td class="py-4 px-5 align-top">Structurer, Trader, Sales, Desk Head</td>
+ <td class="py-4 px-5 align-top">Diseñar payoffs, validar economics y entender volatilidad, correlación, issuer spread y disciplina de hedge.</td>
+ </tr>
+ <tr class="matrix-row transition">
+ <td class="py-4 px-5 font-bold text-rm-espresso align-top">Private banking y wealth management</td>
+ <td class="py-4 px-5 align-top">Advisory · UHNW / Family Office · Open architecture</td>
+ <td class="py-4 px-5 align-top">Relationship Manager, Investment Counselor, Product Specialist</td>
+ <td class="py-4 px-5 align-top">Traducir estructuras complejas a narrativas de yield, growth, protection y monetización con disclosure claro.</td>
+ </tr>
+ <tr class="matrix-row transition">
+ <td class="py-4 px-5 font-bold text-rm-espresso align-top">Asset managers, aseguradoras y pensiones</td>
+ <td class="py-4 px-5 align-top">Multi-Asset · Insurance ALM · Portfolio Construction</td>
+ <td class="py-4 px-5 align-top">PM, CIO, Strategist, ALM Head</td>
+ <td class="py-4 px-5 align-top">Usar notas como overlays de income, convexidad, protección parcial y precisión táctica por mandato.</td>
+ </tr>
+ <tr class="matrix-row transition">
+ <td class="py-4 px-5 font-bold text-rm-espresso align-top">Sector corporativo</td>
+ <td class="py-4 px-5 align-top">Tesorería · Corporate Finance · Balance Sheet Management</td>
+ <td class="py-4 px-5 align-top">Treasurer, CFO, FP&amp;A, Finance Director</td>
+ <td class="py-4 px-5 align-top">Diseñar coberturas estructuradas, FX overlays, yield enhancement y soluciones para liquidez o posiciones concentradas.</td>
+ </tr>
+ <tr class="matrix-row transition">
+ <td class="py-4 px-5 font-bold text-rm-espresso align-top">Family offices y plataformas independientes</td>
+ <td class="py-4 px-5 align-top">Investment Office · Independent Advisors · Capital introduction</td>
+ <td class="py-4 px-5 align-top">CIO, Investment Committee, External Advisor</td>
+ <td class="py-4 px-5 align-top">Evaluar estructuras desde el lente de preservación patrimonial, income, downside shaping y disciplina de emisor.</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+ <div class="border border-rm-sand bg-white rounded-xl p-5"><p class="text-[11px] uppercase tracking-widest text-rm-muted font-bold mb-1">Requisito</p><p class="text-sm text-rm-ink">Formación económico-administrativa y/o financiera.</p></div>
+ <div class="border border-rm-sand bg-white rounded-xl p-5"><p class="text-[11px] uppercase tracking-widest text-rm-muted font-bold mb-1">Requisito</p><p class="text-sm text-rm-ink">Bases sólidas de matemáticas financieras.</p></div>
+ <div class="border border-rm-sand bg-white rounded-xl p-5"><p class="text-[11px] uppercase tracking-widest text-rm-muted font-bold mb-1">Deseable</p><p class="text-sm text-rm-ink">Experiencia en instituciones del medio financiero.</p></div>
+ </div>
+ </section>
 
-  <!-- ===== Curriculum ===== -->
-  <section id="curriculum" class="mb-20 md:mb-28 reveal">
-    <h2 class="text-xs font-bold text-rm-copper uppercase tracking-[0.22em] mb-3">Curriculum Architecture</h2>
-    <h3 class="font-serif text-3xl md:text-4xl text-rm-ink font-semibold mb-6 border-l-4 border-rm-copper pl-5 max-w-3xl leading-tight">Plan de estudios · 5 módulos, un solo workflow de front office</h3>
-    <p class="text-[#4a4036] mb-8 max-w-3xl leading-relaxed">Cada módulo culmina en un <b>capstone aplicado</b>. El recorrido completo replica el trabajo end-to-end del structurer: de la oportunidad al term sheet, del pricing al hedge, del disclosure al pitch.</p>
+ <!-- ===== Curriculum ===== -->
+ <section id="curriculum" class="mb-20 md:mb-28 reveal">
+ <h2 class="text-xs font-bold text-rm-copper uppercase tracking-[0.22em] mb-3">Curriculum Architecture</h2>
+ <h3 class="font-serif text-3xl md:text-4xl text-rm-ink font-semibold mb-6 border-l-4 border-rm-copper pl-5 max-w-3xl leading-tight">Plan de estudios · 5 módulos, un solo workflow de front office</h3>
+ <p class="text-[#4a4036] mb-8 max-w-3xl leading-relaxed">Cada módulo culmina en un <b>capstone aplicado</b>. El recorrido completo replica el trabajo end-to-end del structurer: de la oportunidad al term sheet, del pricing al hedge, del disclosure al pitch.</p>
 
-    <!-- Agenda de sesiones (folleto oficial) -->
-    <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-10">
-      <div class="bg-rm-espresso text-white rounded-xl p-4 text-center"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 1</p><p class="font-serif font-semibold text-lg leading-tight">Lun 6 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">El negocio</p></div>
-      <div class="bg-rm-espresso text-white rounded-xl p-4 text-center"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 2</p><p class="font-serif font-semibold text-lg leading-tight">Mar 7 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">Payoff &amp; pricing</p></div>
-      <div class="bg-rm-espresso text-white rounded-xl p-4 text-center"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 3</p><p class="font-serif font-semibold text-lg leading-tight">Jue 9 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">Hedging &amp; risk</p></div>
-      <div class="bg-rm-espresso text-white rounded-xl p-4 text-center"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 4</p><p class="font-serif font-semibold text-lg leading-tight">Lun 13 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">Distribución</p></div>
-      <div class="bg-rm-espresso text-white rounded-xl p-4 text-center col-span-2 md:col-span-1"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 5</p><p class="font-serif font-semibold text-lg leading-tight">Mar 14 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">Capstone cross-asset</p></div>
-    </div>
+ <!-- Agenda de sesiones (folleto oficial) -->
+ <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-10">
+ <div class="bg-rm-espresso text-white rounded-xl p-4 text-center"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 1</p><p class="font-serif font-semibold text-lg leading-tight">Lun 6 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">El negocio</p></div>
+ <div class="bg-rm-espresso text-white rounded-xl p-4 text-center"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 2</p><p class="font-serif font-semibold text-lg leading-tight">Mar 7 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">Payoff &amp; pricing</p></div>
+ <div class="bg-rm-espresso text-white rounded-xl p-4 text-center"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 3</p><p class="font-serif font-semibold text-lg leading-tight">Jue 9 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">Hedging &amp; risk</p></div>
+ <div class="bg-rm-espresso text-white rounded-xl p-4 text-center"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 4</p><p class="font-serif font-semibold text-lg leading-tight">Lun 13 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">Distribución</p></div>
+ <div class="bg-rm-espresso text-white rounded-xl p-4 text-center col-span-2 md:col-span-1"><p class="text-[10px] uppercase tracking-widest text-rm-copper2 font-bold mb-1">Sesión 5</p><p class="font-serif font-semibold text-lg leading-tight">Mar 14 Jul</p><p class="text-[11px] text-[#c4ad97] mt-1">Capstone cross-asset</p></div>
+ </div>
 
-    <div class="space-y-4">
+ <div class="space-y-4">
 
-      <details class="mod bg-white border border-rm-sand rounded-2xl overflow-hidden shadow-sm" open>
-        <summary class="p-6 flex justify-between items-start gap-4 hover:bg-rm-cream/60 transition">
-          <div>
-            <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 01 · El negocio <span class="text-rm-muted normal-case tracking-normal">· Sesión 1 · 7:00–9:00 pm</span></p>
-            <h4 class="font-serif font-semibold text-rm-ink text-xl md:text-2xl leading-snug">La industria global de Notas Estructuradas como línea de negocio</h4>
-          </div>
-          <span class="chev text-rm-copper text-3xl font-light leading-none mt-1">+</span>
-        </summary>
-        <div class="px-6 pb-7 space-y-5">
-          <div class="bg-rm-cream border border-rm-sand rounded-xl p-4">
-            <p class="text-[11px] font-bold uppercase tracking-widest text-rm-copper mb-1">Objetivo</p>
-            <p class="text-sm text-[#3a322a] leading-relaxed">Entender la arquitectura del negocio, sus familias de producto, drivers de demanda y el rol de cada jugador.</p>
-          </div>
-          <ul class="list-disc pl-5 text-sm text-[#3a322a] space-y-2 leading-relaxed">
-            <li>Evolución del mercado de notas estructuradas en los últimos veinte años y su relevancia dentro de Global Markets.</li>
-            <li>La cadena de valor: estructurador, emisor, trader, banquero de inversión, legal, compliance, wealth y distribución.</li>
-            <li>Familias de producto: capital protected, yield enhancement, autocallables, participation notes, FX/rates-linked y soluciones híbridas.</li>
-            <li>Qué están pidiendo hoy los clientes: yield, growth, protection, monetización de concentración y overlays de liquidez o divisa.</li>
-            <li>Suitability, disclosure, issuer risk y cuándo una estructura agrega valor real — y cuándo no.</li>
-          </ul>
-          <div class="border-t border-rm-sand pt-4">
-            <p class="text-[11px] font-bold uppercase tracking-widest text-rm-muted mb-1">Capstone</p>
-            <p class="text-sm text-rm-espresso font-medium">Mapeo del negocio: familia de producto, necesidad del cliente y dónde la estructura agrega valor real.</p>
-          </div>
-        </div>
-      </details>
+ <details class="mod bg-white border border-rm-sand rounded-2xl overflow-hidden shadow-sm" open>
+ <summary class="p-6 flex justify-between items-start gap-4 hover:bg-rm-cream/60 transition">
+ <div>
+ <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 01 · El negocio <span class="text-rm-muted normal-case tracking-normal">· Sesión 1 · 7:00–9:00 pm</span></p>
+ <h4 class="font-serif font-semibold text-rm-ink text-xl md:text-2xl leading-snug">La industria global de Notas Estructuradas como línea de negocio</h4>
+ </div>
+ <span class="chev text-rm-copper text-3xl font-light leading-none mt-1">+</span>
+ </summary>
+ <div class="px-6 pb-7 space-y-5">
+ <div class="bg-rm-cream border border-rm-sand rounded-xl p-4">
+ <p class="text-[11px] font-bold uppercase tracking-widest text-rm-copper mb-1">Objetivo</p>
+ <p class="text-sm text-[#3a322a] leading-relaxed">Entender la arquitectura del negocio, sus familias de producto, drivers de demanda y el rol de cada jugador.</p>
+ </div>
+ <ul class="list-disc pl-5 text-sm text-[#3a322a] space-y-2 leading-relaxed">
+ <li>Evolución del mercado de notas estructuradas en los últimos veinte años y su relevancia dentro de Global Markets.</li>
+ <li>La cadena de valor: estructurador, emisor, trader, banquero de inversión, legal, compliance, wealth y distribución.</li>
+ <li>Familias de producto: capital protected, yield enhancement, autocallables, participation notes, FX/rates-linked y soluciones híbridas.</li>
+ <li>Qué están pidiendo hoy los clientes: yield, growth, protection, monetización de concentración y overlays de liquidez o divisa.</li>
+ <li>Suitability, disclosure, issuer risk y cuándo una estructura agrega valor real, y cuándo no.</li>
+ </ul>
+ <div class="border-t border-rm-sand pt-4">
+ <p class="text-[11px] font-bold uppercase tracking-widest text-rm-muted mb-1">Capstone</p>
+ <p class="text-sm text-rm-espresso font-medium">Mapeo del negocio: familia de producto, necesidad del cliente y dónde la estructura agrega valor real.</p>
+ </div>
+ </div>
+ </details>
 
-      <details class="mod bg-white border border-rm-sand rounded-2xl overflow-hidden shadow-sm">
-        <summary class="p-6 flex justify-between items-start gap-4 hover:bg-rm-cream/60 transition">
-          <div>
-            <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 02 · Engineer the payoff <span class="text-rm-muted normal-case tracking-normal">· Sesión 2 · 7:00–9:00 pm</span></p>
-            <h4 class="font-serif font-semibold text-rm-ink text-xl md:text-2xl leading-snug">Payoff engineering, term sheets y pricing profesional</h4>
-          </div>
-          <span class="chev text-rm-copper text-3xl font-light leading-none mt-1">+</span>
-        </summary>
-        <div class="px-6 pb-7 space-y-5">
-          <div class="bg-rm-cream border border-rm-sand rounded-xl p-4">
-            <p class="text-[11px] font-bold uppercase tracking-widest text-rm-copper mb-1">Objetivo</p>
-            <p class="text-sm text-[#3a322a] leading-relaxed">Traducir una view o una necesidad de cliente en una estructura ejecutable, defendible y económicamente consistente.</p>
-          </div>
-          <ul class="list-disc pl-5 text-sm text-[#3a322a] space-y-2 leading-relaxed">
-            <li>Building blocks: zero coupon bond, forwards, options vanilla, digitales, barreras y lógica autocall.</li>
-            <li>Curvas de descuento, funding, credit spread del emisor y estimated value versus issue price.</li>
-            <li>Volatility surface, skew, dividendos, correlación, quanto effects y sensibilidad del payoff a cada input.</li>
-            <li>Diseño de term sheet: triggers, coupon memory, barriers, knock-in / knock-out, observation dates y settlement.</li>
-            <li>Walkthrough práctico: del mandato del cliente a la hoja económica de la estructura.</li>
-          </ul>
-          <div class="border-t border-rm-sand pt-4">
-            <p class="text-[11px] font-bold uppercase tracking-widest text-rm-muted mb-1">Capstone</p>
-            <p class="text-sm text-rm-espresso font-medium">Un term sheet defendible con economics que resisten curvas, vol y crédito del emisor.</p>
-          </div>
-        </div>
-      </details>
+ <details class="mod bg-white border border-rm-sand rounded-2xl overflow-hidden shadow-sm">
+ <summary class="p-6 flex justify-between items-start gap-4 hover:bg-rm-cream/60 transition">
+ <div>
+ <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 02 · Engineer the payoff <span class="text-rm-muted normal-case tracking-normal">· Sesión 2 · 7:00–9:00 pm</span></p>
+ <h4 class="font-serif font-semibold text-rm-ink text-xl md:text-2xl leading-snug">Payoff engineering, term sheets y pricing profesional</h4>
+ </div>
+ <span class="chev text-rm-copper text-3xl font-light leading-none mt-1">+</span>
+ </summary>
+ <div class="px-6 pb-7 space-y-5">
+ <div class="bg-rm-cream border border-rm-sand rounded-xl p-4">
+ <p class="text-[11px] font-bold uppercase tracking-widest text-rm-copper mb-1">Objetivo</p>
+ <p class="text-sm text-[#3a322a] leading-relaxed">Traducir una view o una necesidad de cliente en una estructura ejecutable, defendible y económicamente consistente.</p>
+ </div>
+ <ul class="list-disc pl-5 text-sm text-[#3a322a] space-y-2 leading-relaxed">
+ <li>Building blocks: zero coupon bond, forwards, options vanilla, digitales, barreras y lógica autocall.</li>
+ <li>Curvas de descuento, funding, credit spread del emisor y estimated value versus issue price.</li>
+ <li>Volatility surface, skew, dividendos, correlación, quanto effects y sensibilidad del payoff a cada input.</li>
+ <li>Diseño de term sheet: triggers, coupon memory, barriers, knock-in / knock-out, observation dates y settlement.</li>
+ <li>Walkthrough práctico: del mandato del cliente a la hoja económica de la estructura.</li>
+ </ul>
+ <div class="border-t border-rm-sand pt-4">
+ <p class="text-[11px] font-bold uppercase tracking-widest text-rm-muted mb-1">Capstone</p>
+ <p class="text-sm text-rm-espresso font-medium">Un term sheet defendible con economics que resisten curvas, vol y crédito del emisor.</p>
+ </div>
+ </div>
+ </details>
 
-      <details class="mod bg-white border border-rm-sand rounded-2xl overflow-hidden shadow-sm">
-        <summary class="p-6 flex justify-between items-start gap-4 hover:bg-rm-cream/60 transition">
-          <div>
-            <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 03 · Administra el riesgo <span class="text-rm-muted normal-case tracking-normal">· Sesión 3 · 7:00–9:00 pm</span></p>
-            <h4 class="font-serif font-semibold text-rm-ink text-xl md:text-2xl leading-snug">Hedging, Risk &amp; lifecycle management</h4>
-          </div>
-          <span class="chev text-rm-copper text-3xl font-light leading-none mt-1">+</span>
-        </summary>
-        <div class="px-6 pb-7 space-y-5">
-          <div class="bg-rm-cream border border-rm-sand rounded-xl p-4">
-            <p class="text-[11px] font-bold uppercase tracking-widest text-rm-copper mb-1">Objetivo</p>
-            <p class="text-sm text-[#3a322a] leading-relaxed">Entender cómo la mesa administra el riesgo real de un libro de estructurados desde la emisión hasta el “unwind”.</p>
-          </div>
-          <ul class="list-disc pl-5 text-sm text-[#3a322a] space-y-2 leading-relaxed">
-            <li>Griegas relevantes a lo largo del ciclo de vida: delta, gamma, vega, theta, rho y exposición a eventos discretos.</li>
-            <li>Barrier risk, digital convexity, gap risk, correlation breakdown y riesgos difíciles de cubrir en condiciones de estrés.</li>
-            <li>Instrumentos de hedge, rebalanceo, disciplina operativa, inventory management y secondary liquidity.</li>
-            <li>Unwinds, mark-to-market, escenarios, stress testing y P&amp;L attribution.</li>
-            <li>Cómo traducir el lenguaje de la mesa a comité de riesgos, product control y distribución.</li>
-          </ul>
-          <div class="border-t border-rm-sand pt-4">
-            <p class="text-[11px] font-bold uppercase tracking-widest text-rm-muted mb-1">Capstone</p>
-            <p class="text-sm text-rm-espresso font-medium">Un hedge map y plan de lifecycle que sobrevive al estrés y explica su P&amp;L.</p>
-          </div>
-        </div>
-      </details>
+ <details class="mod bg-white border border-rm-sand rounded-2xl overflow-hidden shadow-sm">
+ <summary class="p-6 flex justify-between items-start gap-4 hover:bg-rm-cream/60 transition">
+ <div>
+ <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 03 · Administra el riesgo <span class="text-rm-muted normal-case tracking-normal">· Sesión 3 · 7:00–9:00 pm</span></p>
+ <h4 class="font-serif font-semibold text-rm-ink text-xl md:text-2xl leading-snug">Hedging, Risk &amp; lifecycle management</h4>
+ </div>
+ <span class="chev text-rm-copper text-3xl font-light leading-none mt-1">+</span>
+ </summary>
+ <div class="px-6 pb-7 space-y-5">
+ <div class="bg-rm-cream border border-rm-sand rounded-xl p-4">
+ <p class="text-[11px] font-bold uppercase tracking-widest text-rm-copper mb-1">Objetivo</p>
+ <p class="text-sm text-[#3a322a] leading-relaxed">Entender cómo la mesa administra el riesgo real de un libro de estructurados desde la emisión hasta el “unwind”.</p>
+ </div>
+ <ul class="list-disc pl-5 text-sm text-[#3a322a] space-y-2 leading-relaxed">
+ <li>Griegas relevantes a lo largo del ciclo de vida: delta, gamma, vega, theta, rho y exposición a eventos discretos.</li>
+ <li>Barrier risk, digital convexity, gap risk, correlation breakdown y riesgos difíciles de cubrir en condiciones de estrés.</li>
+ <li>Instrumentos de hedge, rebalanceo, disciplina operativa, inventory management y secondary liquidity.</li>
+ <li>Unwinds, mark-to-market, escenarios, stress testing y P&amp;L attribution.</li>
+ <li>Cómo traducir el lenguaje de la mesa a comité de riesgos, product control y distribución.</li>
+ </ul>
+ <div class="border-t border-rm-sand pt-4">
+ <p class="text-[11px] font-bold uppercase tracking-widest text-rm-muted mb-1">Capstone</p>
+ <p class="text-sm text-rm-espresso font-medium">Un hedge map y plan de lifecycle que sobrevive al estrés y explica su P&amp;L.</p>
+ </div>
+ </div>
+ </details>
 
-      <details class="mod bg-white border border-rm-sand rounded-2xl overflow-hidden shadow-sm">
-        <summary class="p-6 flex justify-between items-start gap-4 hover:bg-rm-cream/60 transition">
-          <div>
-            <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 04 · Dilo con claridad <span class="text-rm-muted normal-case tracking-normal">· Sesión 4 · 7:00–9:00 pm</span></p>
-            <h4 class="font-serif font-semibold text-rm-ink text-xl md:text-2xl leading-snug">Distribución estratégica y la conversación con Wealth &amp; IB</h4>
-          </div>
-          <span class="chev text-rm-copper text-3xl font-light leading-none mt-1">+</span>
-        </summary>
-        <div class="px-6 pb-7 space-y-5">
-          <div class="bg-rm-cream border border-rm-sand rounded-xl p-4">
-            <p class="text-[11px] font-bold uppercase tracking-widest text-rm-copper mb-1">Objetivo</p>
-            <p class="text-sm text-[#3a322a] leading-relaxed">Convertir ingeniería financiera en una propuesta comercial clara, ética y bien posicionada.</p>
-          </div>
-          <ul class="list-disc pl-5 text-sm text-[#3a322a] space-y-2 leading-relaxed">
-            <li>Cómo conversar la misma estructura con IB, private bankers, family offices, treasuries e inversionistas sofisticados.</li>
-            <li>Narrativas de venta por objetivo: yield, growth, protection, monetización de concentración, overlays de FX y rates.</li>
-            <li>Crédito del emisor, liquidez secundaria, costos implícitos y escenarios de pérdida explicados con precisión.</li>
-            <li>Suitability y coordinación entre structuring, legal, compliance, sales y advisory.</li>
-            <li>Buenas prácticas de venta: fair and balanced communication, sin sobreprometer ni faltar a la honestidad con el cliente.</li>
-          </ul>
-          <div class="border-t border-rm-sand pt-4">
-            <p class="text-[11px] font-bold uppercase tracking-widest text-rm-muted mb-1">Resultado</p>
-            <p class="text-sm text-rm-espresso font-medium">Un pitch honesto, preciso y ajustado a cada contraparte — mesa, comité y cliente.</p>
-          </div>
-        </div>
-      </details>
+ <details class="mod bg-white border border-rm-sand rounded-2xl overflow-hidden shadow-sm">
+ <summary class="p-6 flex justify-between items-start gap-4 hover:bg-rm-cream/60 transition">
+ <div>
+ <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 04 · Dilo con claridad <span class="text-rm-muted normal-case tracking-normal">· Sesión 4 · 7:00–9:00 pm</span></p>
+ <h4 class="font-serif font-semibold text-rm-ink text-xl md:text-2xl leading-snug">Distribución estratégica y la conversación con Wealth &amp; IB</h4>
+ </div>
+ <span class="chev text-rm-copper text-3xl font-light leading-none mt-1">+</span>
+ </summary>
+ <div class="px-6 pb-7 space-y-5">
+ <div class="bg-rm-cream border border-rm-sand rounded-xl p-4">
+ <p class="text-[11px] font-bold uppercase tracking-widest text-rm-copper mb-1">Objetivo</p>
+ <p class="text-sm text-[#3a322a] leading-relaxed">Convertir ingeniería financiera en una propuesta comercial clara, ética y bien posicionada.</p>
+ </div>
+ <ul class="list-disc pl-5 text-sm text-[#3a322a] space-y-2 leading-relaxed">
+ <li>Cómo conversar la misma estructura con IB, private bankers, family offices, treasuries e inversionistas sofisticados.</li>
+ <li>Narrativas de venta por objetivo: yield, growth, protection, monetización de concentración, overlays de FX y rates.</li>
+ <li>Crédito del emisor, liquidez secundaria, costos implícitos y escenarios de pérdida explicados con precisión.</li>
+ <li>Suitability y coordinación entre structuring, legal, compliance, sales y advisory.</li>
+ <li>Buenas prácticas de venta: fair and balanced communication, sin sobreprometer ni faltar a la honestidad con el cliente.</li>
+ </ul>
+ <div class="border-t border-rm-sand pt-4">
+ <p class="text-[11px] font-bold uppercase tracking-widest text-rm-muted mb-1">Resultado</p>
+ <p class="text-sm text-rm-espresso font-medium">Un pitch honesto, preciso y ajustado a cada contraparte, mesa, comité y cliente.</p>
+ </div>
+ </div>
+ </details>
 
-      <details class="mod bg-white border border-rm-sand rounded-2xl overflow-hidden shadow-sm">
-        <summary class="p-6 flex justify-between items-start gap-4 hover:bg-rm-cream/60 transition">
-          <div>
-            <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 05 · Demuéstralo <span class="text-rm-muted normal-case tracking-normal">· Sesión 5 · 7:00–9:00 pm</span></p>
-            <h4 class="font-serif font-semibold text-rm-ink text-xl md:text-2xl leading-snug">Capstone cross-asset: originar, estructurar y vender</h4>
-          </div>
-          <span class="chev text-rm-copper text-3xl font-light leading-none mt-1">+</span>
-        </summary>
-        <div class="px-6 pb-7 space-y-5">
-          <div class="bg-rm-cream border border-rm-sand rounded-xl p-4">
-            <p class="text-[11px] font-bold uppercase tracking-widest text-rm-copper mb-1">Objetivo</p>
-            <p class="text-sm text-[#3a322a] leading-relaxed">Integrar originación, pricing, hedge, disclosure y client pitch en un ejercicio de front office completo.</p>
-          </div>
-          <ul class="list-disc pl-5 text-sm text-[#3a322a] space-y-2 leading-relaxed">
-            <li><b>Caso A.</b> Equity-linked solution con lógica de autocall, yield enhancement o participation según objetivo del cliente.</li>
-            <li><b>Caso B.</b> FX / rates-linked structure para tesorería, inversionista internacional o mandato de overlay.</li>
-            <li><b>Caso C.</b> Mandato híbrido de protección / monetización / convexidad para family office o plataforma wealth.</li>
-            <li>Para cada caso: identificación de oportunidad, term sheet, pricing logic, hedge map, disclosure y pitch comercial.</li>
-            <li>Simulación de defensa ante comité interno y conversación final con cliente sofisticado.</li>
-          </ul>
-          <div class="border-t border-rm-sand pt-4">
-            <p class="text-[11px] font-bold uppercase tracking-widest text-rm-muted mb-1">Capstone</p>
-            <p class="text-sm text-rm-espresso font-medium">Un entregable de front office completo: de la oportunidad a la estructura ejecutada, hedgeable y colocable.</p>
-          </div>
-        </div>
-      </details>
+ <details class="mod bg-white border border-rm-sand rounded-2xl overflow-hidden shadow-sm">
+ <summary class="p-6 flex justify-between items-start gap-4 hover:bg-rm-cream/60 transition">
+ <div>
+ <p class="text-[11px] uppercase tracking-widest text-rm-copper font-bold mb-1">Módulo 05 · Demuéstralo <span class="text-rm-muted normal-case tracking-normal">· Sesión 5 · 7:00–9:00 pm</span></p>
+ <h4 class="font-serif font-semibold text-rm-ink text-xl md:text-2xl leading-snug">Capstone cross-asset: originar, estructurar y vender</h4>
+ </div>
+ <span class="chev text-rm-copper text-3xl font-light leading-none mt-1">+</span>
+ </summary>
+ <div class="px-6 pb-7 space-y-5">
+ <div class="bg-rm-cream border border-rm-sand rounded-xl p-4">
+ <p class="text-[11px] font-bold uppercase tracking-widest text-rm-copper mb-1">Objetivo</p>
+ <p class="text-sm text-[#3a322a] leading-relaxed">Integrar originación, pricing, hedge, disclosure y client pitch en un ejercicio de front office completo.</p>
+ </div>
+ <ul class="list-disc pl-5 text-sm text-[#3a322a] space-y-2 leading-relaxed">
+ <li><b>Caso A.</b> Equity-linked solution con lógica de autocall, yield enhancement o participation según objetivo del cliente.</li>
+ <li><b>Caso B.</b> FX / rates-linked structure para tesorería, inversionista internacional o mandato de overlay.</li>
+ <li><b>Caso C.</b> Mandato híbrido de protección / monetización / convexidad para family office o plataforma wealth.</li>
+ <li>Para cada caso: identificación de oportunidad, term sheet, pricing logic, hedge map, disclosure y pitch comercial.</li>
+ <li>Simulación de defensa ante comité interno y conversación final con cliente sofisticado.</li>
+ </ul>
+ <div class="border-t border-rm-sand pt-4">
+ <p class="text-[11px] font-bold uppercase tracking-widest text-rm-muted mb-1">Capstone</p>
+ <p class="text-sm text-rm-espresso font-medium">Un entregable de front office completo: de la oportunidad a la estructura ejecutada, hedgeable y colocable.</p>
+ </div>
+ </div>
+ </details>
 
-    </div>
+ </div>
 
-    <!-- Lo que sale del salón -->
-    <div class="mt-12 bg-white border border-rm-sand rounded-2xl p-7 md:p-9">
-      <h4 class="font-serif text-2xl text-rm-ink font-semibold mb-5">Lo que sale del salón</h4>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
-        <div class="flex gap-3"><span class="text-rm-copper font-bold">✓</span><p class="text-sm text-[#3a322a] leading-relaxed">Framework para originar soluciones desde una necesidad real del cliente.</p></div>
-        <div class="flex gap-3"><span class="text-rm-copper font-bold">✓</span><p class="text-sm text-[#3a322a] leading-relaxed">Lenguaje común para alinear structuring, desk, risk, compliance y ventas.</p></div>
-        <div class="flex gap-3"><span class="text-rm-copper font-bold">✓</span><p class="text-sm text-[#3a322a] leading-relaxed">Mayor capacidad para evaluar cuándo una estructura sí conviene — y cuándo no.</p></div>
-      </div>
-      <p class="text-[11px] font-bold uppercase tracking-widest text-rm-muted mb-3">Formatos de delivery</p>
-      <div class="flex flex-wrap gap-3">
-        <span class="bg-rm-cream border border-rm-sand text-rm-espresso text-sm font-semibold px-4 py-2 rounded-full">Open enrollment · executive format</span>
-        <span class="bg-rm-cream border border-rm-sand text-rm-espresso text-sm font-semibold px-4 py-2 rounded-full">Private cohort · bancos, wealth platforms o asset managers</span>
-        <span class="bg-rm-cream border border-rm-sand text-rm-espresso text-sm font-semibold px-4 py-2 rounded-full">In-company workshop · casos ajustados a tu cartera y cliente objetivo</span>
-      </div>
-      <p class="text-sm text-[#4a4036] mt-4 leading-relaxed">El formato in-company se construye alrededor de tu propia cartera, mercado y cliente objetivo — de modo que los casos que salen del salón sean los que realmente vas a operar.</p>
-    </div>
-  </section>
+ <!-- Lo que sale del salón -->
+ <div class="mt-12 bg-white border border-rm-sand rounded-2xl p-7 md:p-9">
+ <h4 class="font-serif text-2xl text-rm-ink font-semibold mb-5">Lo que sale del salón</h4>
+ <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+ <div class="flex gap-3"><span class="text-rm-copper font-bold"></span><p class="text-sm text-[#3a322a] leading-relaxed">Framework para originar soluciones desde una necesidad real del cliente.</p></div>
+ <div class="flex gap-3"><span class="text-rm-copper font-bold"></span><p class="text-sm text-[#3a322a] leading-relaxed">Lenguaje común para alinear structuring, desk, risk, compliance y ventas.</p></div>
+ <div class="flex gap-3"><span class="text-rm-copper font-bold"></span><p class="text-sm text-[#3a322a] leading-relaxed">Mayor capacidad para evaluar cuándo una estructura sí conviene, y cuándo no.</p></div>
+ </div>
+ <p class="text-[11px] font-bold uppercase tracking-widest text-rm-muted mb-3">Formatos de delivery</p>
+ <div class="flex flex-wrap gap-3">
+ <span class="bg-rm-cream border border-rm-sand text-rm-espresso text-sm font-semibold px-4 py-2 rounded-full">Open enrollment · executive format</span>
+ <span class="bg-rm-cream border border-rm-sand text-rm-espresso text-sm font-semibold px-4 py-2 rounded-full">Private cohort · bancos, wealth platforms o asset managers</span>
+ <span class="bg-rm-cream border border-rm-sand text-rm-espresso text-sm font-semibold px-4 py-2 rounded-full">In-company workshop · casos ajustados a tu cartera y cliente objetivo</span>
+ </div>
+ <p class="text-sm text-[#4a4036] mt-4 leading-relaxed">El formato in-company se construye alrededor de tu propia cartera, mercado y cliente objetivo, de modo que los casos que salen del salón sean los que realmente vas a operar.</p>
+ </div>
+ </section>
 
-  <!-- ===== Faculty ===== -->
-  <section id="faculty" class="mb-20 md:mb-28 reveal">
-    <h2 class="text-xs font-bold text-rm-copper uppercase tracking-[0.22em] mb-3">Speaker · Faculty Profile</h2>
-    <h3 class="font-serif text-3xl md:text-4xl text-rm-ink font-semibold mb-8 border-l-4 border-rm-copper pl-5 max-w-3xl leading-tight">Impartido por quien ha corrido el libro a gran escala</h3>
-    <div class="bg-gradient-to-br from-rm-espresso2 to-rm-deep text-white rounded-3xl p-8 md:p-12 border border-rm-copper/30 shadow-2xl">
-      <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-2">
-        <h4 class="font-serif text-3xl md:text-4xl font-semibold">Gisela Flores</h4>
-        <p class="text-rm-copper2 text-sm font-semibold tracking-wide uppercase">Global Markets · Structuring</p>
-      </div>
-      <p class="text-[#c4ad97] text-sm mb-6">Global Markets · Trading · Equity Structuring · FX &amp; Interest-Rate Derivatives</p>
-      <div class="flex flex-wrap gap-3 mb-7">
-        <span class="bg-rm-copper/20 border border-rm-copper/40 text-rm-copper2 text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full">18+ años front office</span>
-        <span class="bg-rm-copper/20 border border-rm-copper/40 text-rm-copper2 text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full">Cross-asset structuring</span>
-      </div>
-      <p class="text-[#e0cdb9] leading-relaxed max-w-4xl mb-8">
-        Gisela Flores cuenta con más de 18 años en áreas de Mercados Globales, Trading &amp; Equity Structuring, así como FX &amp; Interest-Rate Derivatives, con enfoque en generación de alpha y optimización de riesgo. Ha gestionado portafolios de derivados a gran escala, liderado el desarrollo de plataformas de trading y valuación, y diseñado estrategias globales para la operación y ejecución en mercados de derivados. Su dominio cubre desde vanilla products hasta estructuras avanzadas de exotic products, operando de manera transversal en diversas clases de activos y subyacentes.
-      </p>
-      <p class="text-[11px] font-bold uppercase tracking-widest text-rm-copper2 mb-4">Áreas de expertise</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="bg-white/[0.06] border border-white/10 rounded-xl p-4 text-sm text-[#e0cdb9]">Cross-asset structuring across equities, fixed income, FX, rates and exotics.</div>
-        <div class="bg-white/[0.06] border border-white/10 rounded-xl p-4 text-sm text-[#e0cdb9]">Trading, valuation infrastructure and risk optimization.</div>
-        <div class="bg-white/[0.06] border border-white/10 rounded-xl p-4 text-sm text-[#e0cdb9]">Portfolio-scale derivatives management and execution strategy.</div>
-        <div class="bg-white/[0.06] border border-white/10 rounded-xl p-4 text-sm text-[#e0cdb9]">Front-office dialogue between structuring, sales, wealth and client committees.</div>
-      </div>
-    </div>
+ <!-- ===== Faculty ===== -->
+ <section id="faculty" class="mb-20 md:mb-28 reveal">
+ <h2 class="text-xs font-bold text-rm-copper uppercase tracking-[0.22em] mb-3">Speaker · Faculty Profile</h2>
+ <h3 class="font-serif text-3xl md:text-4xl text-rm-ink font-semibold mb-8 border-l-4 border-rm-copper pl-5 max-w-3xl leading-tight">Impartido por quien ha corrido el libro a gran escala</h3>
+ <div class="bg-gradient-to-br from-rm-espresso2 to-rm-deep text-white rounded-3xl p-8 md:p-12 border border-rm-copper/30 shadow-2xl">
+ <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-2">
+ <h4 class="font-serif text-3xl md:text-4xl font-semibold">Gisela Flores</h4>
+ <p class="text-rm-copper2 text-sm font-semibold tracking-wide uppercase">Global Markets · Structuring</p>
+ </div>
+ <p class="text-[#c4ad97] text-sm mb-6">Global Markets · Trading · Equity Structuring · FX &amp; Interest-Rate Derivatives</p>
+ <div class="flex flex-wrap gap-3 mb-7">
+ <span class="bg-rm-copper/20 border border-rm-copper/40 text-rm-copper2 text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full">18+ años front office</span>
+ <span class="bg-rm-copper/20 border border-rm-copper/40 text-rm-copper2 text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full">Cross-asset structuring</span>
+ </div>
+ <p class="text-[#e0cdb9] leading-relaxed max-w-4xl mb-8">
+ Gisela Flores cuenta con más de 18 años en áreas de Mercados Globales, Trading &amp; Equity Structuring, así como FX &amp; Interest-Rate Derivatives, con enfoque en generación de alpha y optimización de riesgo. Ha gestionado portafolios de derivados a gran escala, liderado el desarrollo de plataformas de trading y valuación, y diseñado estrategias globales para la operación y ejecución en mercados de derivados. Su dominio cubre desde vanilla products hasta estructuras avanzadas de exotic products, operando de manera transversal en diversas clases de activos y subyacentes.
+ </p>
+ <p class="text-[11px] font-bold uppercase tracking-widest text-rm-copper2 mb-4">Áreas de expertise</p>
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+ <div class="bg-white/[0.06] border border-white/10 rounded-xl p-4 text-sm text-[#e0cdb9]">Cross-asset structuring across equities, fixed income, FX, rates and exotics.</div>
+ <div class="bg-white/[0.06] border border-white/10 rounded-xl p-4 text-sm text-[#e0cdb9]">Trading, valuation infrastructure and risk optimization.</div>
+ <div class="bg-white/[0.06] border border-white/10 rounded-xl p-4 text-sm text-[#e0cdb9]">Portfolio-scale derivatives management and execution strategy.</div>
+ <div class="bg-white/[0.06] border border-white/10 rounded-xl p-4 text-sm text-[#e0cdb9]">Front-office dialogue between structuring, sales, wealth and client committees.</div>
+ </div>
+ </div>
 
-    <div class="mt-8 bg-white border border-rm-sand rounded-2xl p-7 md:p-9">
-      <p class="text-[11px] font-bold uppercase tracking-widest text-rm-copper mb-3">About RiskMathics</p>
-      <p class="text-sm md:text-base text-[#4a4036] leading-relaxed max-w-4xl">
-        RiskMathics Financial Institute es una organización líder en educación y certificación, fundada en 2005 y con sede en México, con operación internacional en Estados Unidos y Toronto. Por más de dos décadas, RiskMathics ha impartido programas de formación de vanguardia para la industria financiera en dominios core y emergentes: Financial Risk Management, Asset Allocation &amp; Asset Management, Derivatives, Alternative Investments, ESG Climate Risk &amp; Sustainable Finance, Global Markets, Artificial Intelligence &amp; Quantum Computing in Finance, Private Wealth Management e Investment Banking.
-      </p>
-    </div>
-  </section>
+ <div class="mt-8 bg-white border border-rm-sand rounded-2xl p-7 md:p-9">
+ <p class="text-[11px] font-bold uppercase tracking-widest text-rm-copper mb-3">About RiskMathics</p>
+ <p class="text-sm md:text-base text-[#4a4036] leading-relaxed max-w-4xl">
+ RiskMathics Financial Institute es una organización líder en educación y certificación, fundada en 2005 y con sede en México, con operación internacional en Estados Unidos y Toronto. Por más de dos décadas, RiskMathics ha impartido programas de formación de vanguardia para la industria financiera en dominios core y emergentes: Financial Risk Management, Asset Allocation &amp; Asset Management, Derivatives, Alternative Investments, ESG Climate Risk &amp; Sustainable Finance, Global Markets, Artificial Intelligence &amp; Quantum Computing in Finance, Private Wealth Management e Investment Banking.
+ </p>
+ </div>
+ </section>
 
-  <!-- ===== Urgencia ===== -->
-  <section class="mb-20 md:mb-24 reveal">
-    <div class="bg-gradient-to-r from-rm-copper2 to-rm-copper rounded-3xl p-8 md:p-10 text-[#2a1003] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-[0_20px_60px_rgba(194,96,58,.35)]">
-      <div>
-        <p class="text-xs font-bold uppercase tracking-[0.22em] mb-2">Cupo limitado · Formato ejecutivo</p>
-        <h4 class="font-serif text-2xl md:text-3xl font-semibold leading-snug">Próxima edición 2026 — 5 sesiones live · 7:00–9:00 pm CDMX · fechas por anunciar. Aparta tu lugar hoy.</h4>
-        <p class="text-sm mt-2 font-medium opacity-90">Los grupos ejecutivos se cierran al llenarse el cupo. Reserva tu lugar hoy.</p>
-      </div>
-      <a href="#rm-enroll" class="flex-none bg-rm-espresso text-white font-bold px-8 py-4 rounded-full hover:bg-rm-deep hover:-translate-y-0.5 transition shadow-lg whitespace-nowrap">Reservar mi lugar →</a>
-    </div>
-  </section>
+ <!-- ===== Urgencia ===== -->
+ <section class="mb-20 md:mb-24 reveal">
+ <div class="bg-gradient-to-r from-rm-copper2 to-rm-copper rounded-3xl p-8 md:p-10 text-[#2a1003] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-[0_20px_60px_rgba(194,96,58,.35)]">
+ <div>
+ <p class="text-xs font-bold uppercase tracking-[0.22em] mb-2">Cupo limitado · Formato ejecutivo</p>
+ <h4 class="font-serif text-2xl md:text-3xl font-semibold leading-snug">Próxima edición 2026, 5 sesiones live · 7:00–9:00 pm CDMX · fechas por anunciar. Aparta tu lugar hoy.</h4>
+ <p class="text-sm mt-2 font-medium opacity-90">Los grupos ejecutivos se cierran al llenarse el cupo. Reserva tu lugar hoy.</p>
+ </div>
+ <a href="#rm-enroll" class="flex-none bg-rm-espresso text-white font-bold px-8 py-4 rounded-full hover:bg-rm-deep hover:-translate-y-0.5 transition shadow-lg whitespace-nowrap">Reservar mi lugar →</a>
+ </div>
+ </section>
 
 </main>
 
 <!-- ===== RISKMATHICS SALES MACHINE v3.2 (inyectable) ===== -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
 <style>
-  #rm-enroll .iti{width:100%;}
-  #rm-enroll .iti__selected-flag{background:transparent;padding-left:0;}
-  #rm-enroll input,#rm-enroll select{outline:none;background:transparent;}
-  #rm-enroll .rm-in{width:100%;border:none;border-bottom:1px solid #dfe5ee;border-radius:0;padding:9px 1px 10px;font-size:15px;font-family:'Lora',Georgia,serif;color:#1b2430;transition:border-color .18s;}
-  #rm-enroll .rm-in:focus{border-bottom-color:#8f9bb0;}
-  #rm-enroll .rm-in::placeholder{color:#b7c0cd;}
-  #rm-enroll .rm-lb{display:block;font-family:'Poppins',Arial,sans-serif;font-size:10px;letter-spacing:1.6px;font-weight:500;color:#93A0B4;text-transform:uppercase;margin-bottom:2px;}
-  #rm-enroll select.rm-in{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2393A0B4' stroke-width='1.4' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center;padding-right:20px;}
-  @media (max-width:560px){#rm-enroll .rm-2col{grid-template-columns:1fr !important;}}
+ #rm-enroll .iti{width:100%;}
+ #rm-enroll .iti__selected-flag{background:transparent;padding-left:0;}
+ #rm-enroll input,#rm-enroll select{outline:none;background:transparent;}
+ #rm-enroll .rm-in{width:100%;border:none;border-bottom:1px solid #dfe5ee;border-radius:0;padding:9px 1px 10px;font-size:15px;font-family:'Lora',Georgia,serif;color:#1b2430;transition:border-color .18s;}
+ #rm-enroll .rm-in:focus{border-bottom-color:#8f9bb0;}
+ #rm-enroll .rm-in::placeholder{color:#b7c0cd;}
+ #rm-enroll .rm-lb{display:block;font-family:'Poppins',Arial,sans-serif;font-size:10px;letter-spacing:1.6px;font-weight:500;color:#93A0B4;text-transform:uppercase;margin-bottom:2px;}
+ #rm-enroll select.rm-in{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2393A0B4' stroke-width='1.4' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center;padding-right:20px;}
+ @media (max-width:560px){#rm-enroll .rm-2col{grid-template-columns:1fr !important;}}
 </style>
 <section id="rm-enroll" style="background:linear-gradient(135deg,#3d2417,#170d08);color:#fff;padding:88px 22px;font-family:'Lora',Georgia,serif;">
-  <div style="max-width:600px;margin:0 auto;">
-    <div style="text-align:center;margin-bottom:38px;">
-      <div style="color:#d98e5e;letter-spacing:3px;font-size:10.5px;font-weight:500;">INSCRIPCIÓN · CUPO LIMITADO</div>
-      <h2 style="font-size:26px;margin:16px 0 0;font-weight:600;line-height:1.25;letter-spacing:.3px;">Asegura tu lugar</h2>
-      <div style="width:50px;height:2px;background:#d98e5e;margin:18px auto;"></div>
-      <p style="color:#e0cdb9;font-size:15px;margin:0;font-family:'Lora',Georgia,serif;font-style:italic;">Déjanos tus datos, verifica tu correo y tu WhatsApp,<br>y recibe el temario completo. Sin compromiso.</p>
-    </div>
-    <div style="background:#ffffff;color:#1b2430;border-radius:6px;padding:44px 42px;border:1px solid rgba(255,255,255,.14);box-shadow:0 2px 24px rgba(0,0,0,.16);">
-      <form id="rm-lead" onsubmit="return rmSubmit(event)" style="display:grid;gap:22px;">
-        <div><label class="rm-lb">Nombre(s)</label><input class="rm-in" name="nombre" required></div>
-        <div class="rm-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:22px 20px;">
-          <div><label class="rm-lb">Apellido paterno</label><input class="rm-in" name="apellido_paterno" required></div>
-          <div><label class="rm-lb">Apellido materno</label><input class="rm-in" name="apellido_materno"></div>
-        </div>
-        <div><label class="rm-lb">Email corporativo</label><input class="rm-in" type="email" name="email" required></div>
-        <div class="rm-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:22px 20px;">
-          <div><label class="rm-lb">Puesto</label><input class="rm-in" name="puesto" required></div>
-          <div><label class="rm-lb">Institución / Empresa</label><input class="rm-in" name="empresa" required></div>
-        </div>
-        <div><label class="rm-lb">Sector financiero / industria</label>
-          <select class="rm-in" name="sector" required>
-            <option value="" disabled selected></option>
-            <option>AFORE / Fondos de Pensión</option>
-            <option>Aseguradora / Insurance</option>
-            <option>Banca</option>
-            <option>Casa de Bolsa / Broker Dealer</option>
-            <option>Asset Manager</option>
-            <option>Hedge Fund</option>
-            <option>Family Office</option>
-            <option>Corporativo</option>
-            <option>PyME</option>
-            <option>Gobierno</option>
-            <option>Energía</option>
-            <option>Otro</option>
-          </select>
-        </div>
-        <div class="rm-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:22px 20px;">
-          <div><label class="rm-lb">País</label>
-            <select class="rm-in" name="pais" required>
-              <option value="" disabled data-iso=""></option>
-              <option data-iso="mx" selected>México</option>
-              <option data-iso="us">Estados Unidos</option>
-              <option data-iso="es">España</option>
-              <option data-iso="co">Colombia</option>
-              <option data-iso="pe">Perú</option>
-              <option data-iso="cl">Chile</option>
-              <option data-iso="ar">Argentina</option>
-              <option data-iso="ec">Ecuador</option>
-              <option data-iso="gt">Guatemala</option>
-              <option data-iso="pa">Panamá</option>
-              <option data-iso="cr">Costa Rica</option>
-              <option data-iso="do">República Dominicana</option>
-              <option data-iso="bo">Bolivia</option>
-              <option data-iso="uy">Uruguay</option>
-              <option data-iso="py">Paraguay</option>
-              <option data-iso="ve">Venezuela</option>
-              <option data-iso="hn">Honduras</option>
-              <option data-iso="sv">El Salvador</option>
-              <option data-iso="ni">Nicaragua</option>
-              <option data-iso="br">Brasil</option>
-              <option data-iso="ca">Canadá</option>
-              <option data-iso="">Otro</option>
-            </select>
-          </div>
-          <div><label class="rm-lb">WhatsApp</label><input class="rm-in" id="rm-whatsapp" name="whatsapp" type="tel" required></div>
-        </div>
-        <label style="display:flex;align-items:flex-start;gap:10px;font-size:11.5px;color:#5a6577;font-family:'Lora',Georgia,serif;line-height:1.55;cursor:pointer;margin-top:2px;">
-          <input type="checkbox" name="privacidad" required style="margin-top:2px;width:14px;height:14px;flex:none;cursor:pointer;accent-color:#1b2430;">
-          <span>He leído y acepto el <a href="https://riskmathics.com/avisoprivacidad" target="_blank" rel="noopener" style="color:#1b2430;font-weight:600;text-decoration:underline;text-underline-offset:2px;">Aviso de Privacidad</a> y autorizo el tratamiento de mis datos y ser contactado por RiskMathics.</span>
-        </label>
-        <button type="submit" style="background:#c2603a;color:#ffffff;font-weight:600;font-size:13px;letter-spacing:1.8px;text-transform:uppercase;border:none;padding:17px;border-radius:4px;cursor:pointer;font-family:'Poppins',Arial,sans-serif;margin-top:4px;">Quiero el temario</button>
-        <p style="font-size:10.5px;color:#9aa4b4;margin:0;text-align:center;font-family:'Poppins',Arial,sans-serif;letter-spacing:.4px;">Verificamos tu correo y tu teléfono con un código · Datos protegidos</p>
-      </form>
-      <div id="rm-verify" style="display:none;"></div>
-      <div id="rm-thanks" style="display:none;border:1px solid #b7e4c7;background:#f6fdf9;color:#1b4332;padding:22px;border-radius:6px;font-size:14.5px;font-family:'Lora',Georgia,serif;line-height:1.6;"><b>Listo.</b> Recibimos y verificamos tus datos. Te enviamos el temario a tu correo y un asesor te contactará.</div>
-      <div style="margin-top:34px;padding-top:28px;border-top:1px solid #edf0f5;text-align:center;">
-        <div style="font-size:10px;color:#93A0B4;letter-spacing:2.2px;font-family:'Poppins',Arial,sans-serif;">O INSCRÍBETE Y PAGA DIRECTO</div>
-        <div style="font-size:30px;font-weight:300;color:#2a1810;margin:14px 0 2px;font-family:'Poppins',Arial,sans-serif;letter-spacing:.5px;">MXN $40,600</div>
-        <div style="font-size:11px;color:#9aa4b4;font-family:'Lora',Georgia,serif;font-style:italic;margin-bottom:18px;">IVA</div>
-        <div style="display:grid;gap:10px;">
-          <a id="rm-paypal" href="https://bffdsgvgcvmojobfiuay.supabase.co/functions/v1/paypal-pay?curso=structurednotes" target="_blank" rel="noopener" style="background:#c2603a;color:#ffffff;font-weight:600;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;padding:15px;border-radius:4px;text-decoration:none;white-space:nowrap;font-family:'Poppins',Arial,sans-serif;">Pagar con PayPal</a>
-          <a id="rm-stripe" href="https://buy.stripe.com/dRmfZ96fl8CQ1cda7f2Ry1a" target="_blank" rel="noopener" style="background:transparent;border:1.5px solid #2a1810;color:#2a1810;font-weight:600;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;padding:14px;border-radius:4px;text-decoration:none;white-space:nowrap;font-family:'Poppins',Arial,sans-serif;">Pagar con tarjeta · Stripe</a>
-        </div>
-        <p style="font-size:10px;color:#b3bcc9;margin-top:16px;font-family:'Poppins',Arial,sans-serif;letter-spacing:.5px;">100% seguro · SSL · PayPal Verified · RiskMathics Financial Institute</p>
-      </div>
-    </div>
-  </div>
+ <div style="max-width:600px;margin:0 auto;">
+ <div style="text-align:center;margin-bottom:38px;">
+ <div style="color:#d98e5e;letter-spacing:3px;font-size:10.5px;font-weight:500;">INSCRIPCIÓN · CUPO LIMITADO</div>
+ <h2 style="font-size:26px;margin:16px 0 0;font-weight:600;line-height:1.25;letter-spacing:.3px;">Asegura tu lugar</h2>
+ <div style="width:50px;height:2px;background:#d98e5e;margin:18px auto;"></div>
+ <p style="color:#e0cdb9;font-size:15px;margin:0;font-family:'Lora',Georgia,serif;font-style:italic;">Déjanos tus datos, verifica tu correo y tu WhatsApp,<br>y recibe el temario completo. Sin compromiso.</p>
+ </div>
+ <div style="background:#ffffff;color:#1b2430;border-radius:6px;padding:44px 42px;border:1px solid rgba(255,255,255,.14);box-shadow:0 2px 24px rgba(0,0,0,.16);">
+ <form id="rm-lead" onsubmit="return rmSubmit(event)" style="display:grid;gap:22px;">
+ <div><label class="rm-lb">Nombre(s)</label><input class="rm-in" name="nombre" required></div>
+ <div class="rm-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:22px 20px;">
+ <div><label class="rm-lb">Apellido paterno</label><input class="rm-in" name="apellido_paterno" required></div>
+ <div><label class="rm-lb">Apellido materno</label><input class="rm-in" name="apellido_materno"></div>
+ </div>
+ <div><label class="rm-lb">Email corporativo</label><input class="rm-in" type="email" name="email" required></div>
+ <div class="rm-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:22px 20px;">
+ <div><label class="rm-lb">Puesto</label><input class="rm-in" name="puesto" required></div>
+ <div><label class="rm-lb">Institución / Empresa</label><input class="rm-in" name="empresa" required></div>
+ </div>
+ <div><label class="rm-lb">Sector financiero / industria</label>
+ <select class="rm-in" name="sector" required>
+ <option value="" disabled selected></option>
+ <option>AFORE / Fondos de Pensión</option>
+ <option>Aseguradora / Insurance</option>
+ <option>Banca</option>
+ <option>Casa de Bolsa / Broker Dealer</option>
+ <option>Asset Manager</option>
+ <option>Hedge Fund</option>
+ <option>Family Office</option>
+ <option>Corporativo</option>
+ <option>PyME</option>
+ <option>Gobierno</option>
+ <option>Energía</option>
+ <option>Otro</option>
+ </select>
+ </div>
+ <div class="rm-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:22px 20px;">
+ <div><label class="rm-lb">País</label>
+ <select class="rm-in" name="pais" required>
+ <option value="" disabled data-iso=""></option>
+ <option data-iso="mx" selected>México</option>
+ <option data-iso="us">Estados Unidos</option>
+ <option data-iso="es">España</option>
+ <option data-iso="co">Colombia</option>
+ <option data-iso="pe">Perú</option>
+ <option data-iso="cl">Chile</option>
+ <option data-iso="ar">Argentina</option>
+ <option data-iso="ec">Ecuador</option>
+ <option data-iso="gt">Guatemala</option>
+ <option data-iso="pa">Panamá</option>
+ <option data-iso="cr">Costa Rica</option>
+ <option data-iso="do">República Dominicana</option>
+ <option data-iso="bo">Bolivia</option>
+ <option data-iso="uy">Uruguay</option>
+ <option data-iso="py">Paraguay</option>
+ <option data-iso="ve">Venezuela</option>
+ <option data-iso="hn">Honduras</option>
+ <option data-iso="sv">El Salvador</option>
+ <option data-iso="ni">Nicaragua</option>
+ <option data-iso="br">Brasil</option>
+ <option data-iso="ca">Canadá</option>
+ <option data-iso="">Otro</option>
+ </select>
+ </div>
+ <div><label class="rm-lb">WhatsApp</label><input class="rm-in" id="rm-whatsapp" name="whatsapp" type="tel" required></div>
+ </div>
+ <label style="display:flex;align-items:flex-start;gap:10px;font-size:11.5px;color:#5a6577;font-family:'Lora',Georgia,serif;line-height:1.55;cursor:pointer;margin-top:2px;">
+ <input type="checkbox" name="privacidad" required style="margin-top:2px;width:14px;height:14px;flex:none;cursor:pointer;accent-color:#1b2430;">
+ <span>He leído y acepto el <a href="https://riskmathics.com/avisoprivacidad" target="_blank" rel="noopener" style="color:#1b2430;font-weight:600;text-decoration:underline;text-underline-offset:2px;">Aviso de Privacidad</a> y autorizo el tratamiento de mis datos y ser contactado por RiskMathics.</span>
+ </label>
+ <button type="submit" style="background:#c2603a;color:#ffffff;font-weight:600;font-size:13px;letter-spacing:1.8px;text-transform:uppercase;border:none;padding:17px;border-radius:4px;cursor:pointer;font-family:'Poppins',Arial,sans-serif;margin-top:4px;">Quiero el temario</button>
+ <p style="font-size:10.5px;color:#9aa4b4;margin:0;text-align:center;font-family:'Poppins',Arial,sans-serif;letter-spacing:.4px;">Verificamos tu correo y tu teléfono con un código · Datos protegidos</p>
+ </form>
+ <div id="rm-verify" style="display:none;"></div>
+ <div id="rm-thanks" style="display:none;border:1px solid #b7e4c7;background:#f6fdf9;color:#1b4332;padding:22px;border-radius:6px;font-size:14.5px;font-family:'Lora',Georgia,serif;line-height:1.6;"><b>Listo.</b> Recibimos y verificamos tus datos. Te enviamos el temario a tu correo y un asesor te contactará.</div>
+ <div style="margin-top:34px;padding-top:28px;border-top:1px solid #edf0f5;text-align:center;">
+ <div style="font-size:10px;color:#93A0B4;letter-spacing:2.2px;font-family:'Poppins',Arial,sans-serif;">O INSCRÍBETE Y PAGA DIRECTO</div>
+ <div style="font-size:30px;font-weight:300;color:#2a1810;margin:14px 0 2px;font-family:'Poppins',Arial,sans-serif;letter-spacing:.5px;">MXN $40,600</div>
+ <div style="font-size:11px;color:#9aa4b4;font-family:'Lora',Georgia,serif;font-style:italic;margin-bottom:18px;">IVA</div>
+ <div style="display:grid;gap:10px;">
+ <a id="rm-paypal" href="https://bffdsgvgcvmojobfiuay.supabase.co/functions/v1/paypal-pay?curso=structurednotes" target="_blank" rel="noopener" style="background:#c2603a;color:#ffffff;font-weight:600;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;padding:15px;border-radius:4px;text-decoration:none;white-space:nowrap;font-family:'Poppins',Arial,sans-serif;">Pagar con PayPal</a>
+ <a id="rm-stripe" href="https://buy.stripe.com/dRmfZ96fl8CQ1cda7f2Ry1a" target="_blank" rel="noopener" style="background:transparent;border:1.5px solid #2a1810;color:#2a1810;font-weight:600;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;padding:14px;border-radius:4px;text-decoration:none;white-space:nowrap;font-family:'Poppins',Arial,sans-serif;">Pagar con tarjeta · Stripe</a>
+ </div>
+ <p style="font-size:10px;color:#b3bcc9;margin-top:16px;font-family:'Poppins',Arial,sans-serif;letter-spacing:.5px;">100% seguro · SSL · PayPal Verified · RiskMathics Financial Institute</p>
+ </div>
+ </div>
+ </div>
 </section>
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
 <script>
@@ -638,7 +638,7 @@ if(window.intlTelInput&&tel){rmIti=window.intlTelInput(tel,{initialCountry:"mx",
 if(sel){sel.addEventListener('change',function(){var o=sel.options[sel.selectedIndex];if(o&&o.dataset.iso&&rmIti)rmIti.setCountry(o.dataset.iso);});
 tel.addEventListener('countrychange',function(){if(!rmIti)return;var c=rmIti.getSelectedCountryData();for(var i=0;i<sel.options.length;i++){if((sel.options[i].dataset.iso||'')===c.iso2){sel.selectedIndex=i;break;}}});}}})();
 async function rmPost(p){const r=await fetch(RM_VURL,{method:"POST",headers:{"Content-Type":"application/json","apikey":RM_VKEY,"Authorization":"Bearer "+RM_VKEY},body:JSON.stringify(p)});return r.json();}
-async function rmSubmit(e){e.preventDefault();const f=e.target,d=Object.fromEntries(new FormData(f));if(!f.privacidad||!f.privacidad.checked){alert("Debes aceptar el Aviso de Privacidad para continuar.");return false;}/*RM_FREE*/var _dom=((d.email||"").toLowerCase().split("@")[1]||"").trim();var _free=["gmail.com","googlemail.com","hotmail.com","hotmail.es","hotmail.com.mx","hotmail.co.uk","hotmail.fr","hotmail.de","hotmail.it","outlook.com","outlook.es","outlook.com.mx","outlook.co.uk","live.com","live.com.mx","live.mx","live.fr","msn.com","yahoo.com","yahoo.com.mx","yahoo.es","yahoo.co.uk","yahoo.fr","yahoo.de","yahoo.it","yahoo.ca","ymail.com","rocketmail.com","aol.com","icloud.com","me.com","mac.com","proton.me","protonmail.com","pm.me","zoho.com","zohomail.com","mail.com","email.com","gmx.com","gmx.de","gmx.net","yandex.com","yandex.ru","yandex.mx","tutanota.com","tuta.io","fastmail.com","hey.com","inbox.com","gmx.es","rediffmail.com","qq.com","163.com","126.com","sina.com","naver.com","daum.net","hanmail.net","web.de","t-online.de","orange.fr","free.fr","laposte.net","wanadoo.fr","libero.it","virgilio.it","terra.com.mx","prodigy.net.mx","att.net","comcast.net","verizon.net","sbcglobal.net"];if(_dom&&_free.indexOf(_dom)>=0){var _w=document.getElementById("rm-free-warn");if(!_w){_w=document.createElement("div");_w.id="rm-free-warn";var _sb=f.querySelector("button[type=submit]");if(_sb&&_sb.parentNode){_sb.parentNode.insertBefore(_w,_sb);}else{f.appendChild(_w);}}_w.innerHTML='<div style="border:1px solid #d8dee9;background:#f7f9fc;padding:14px 16px;margin:0 0 4px;font-family:Lora,Georgia,serif;font-size:13.5px;color:#2c3950;line-height:1.6;border-radius:8px;">Solo aceptamos <b>correos corporativos</b> — direcciones como @gmail, @hotmail, @outlook o @yahoo no son válidas. Usa el correo de tu empresa.<br><span style="display:block;margin-top:6px;">¿No tienes correo corporativo?</span><a href="https://wa.me/525579894034?text='+encodeURIComponent("Hola, ¿qué tal? Quiero informes del programa: "+(document.title||"").slice(0,70)+" — no tengo correo corporativo.")+'" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;background:#25D366;color:#fff;padding:10px 18px;border-radius:7px;text-decoration:none;font-family:Poppins,Arial,sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;">ESCRÍBENOS POR WHATSAPP →</a></div>';_w.scrollIntoView({behavior:"smooth",block:"center"});var _b=f.querySelector("button[type=submit]");if(_b){_b.textContent="QUIERO EL TEMARIO";_b.disabled=false;}return false;}
+async function rmSubmit(e){e.preventDefault();const f=e.target,d=Object.fromEntries(new FormData(f));if(!f.privacidad||!f.privacidad.checked){alert("Debes aceptar el Aviso de Privacidad para continuar.");return false;}/*RM_FREE*/var _dom=((d.email||"").toLowerCase().split("@")[1]||"").trim();var _free=["gmail.com","googlemail.com","hotmail.com","hotmail.es","hotmail.com.mx","hotmail.co.uk","hotmail.fr","hotmail.de","hotmail.it","outlook.com","outlook.es","outlook.com.mx","outlook.co.uk","live.com","live.com.mx","live.mx","live.fr","msn.com","yahoo.com","yahoo.com.mx","yahoo.es","yahoo.co.uk","yahoo.fr","yahoo.de","yahoo.it","yahoo.ca","ymail.com","rocketmail.com","aol.com","icloud.com","me.com","mac.com","proton.me","protonmail.com","pm.me","zoho.com","zohomail.com","mail.com","email.com","gmx.com","gmx.de","gmx.net","yandex.com","yandex.ru","yandex.mx","tutanota.com","tuta.io","fastmail.com","hey.com","inbox.com","gmx.es","rediffmail.com","qq.com","163.com","126.com","sina.com","naver.com","daum.net","hanmail.net","web.de","t-online.de","orange.fr","free.fr","laposte.net","wanadoo.fr","libero.it","virgilio.it","terra.com.mx","prodigy.net.mx","att.net","comcast.net","verizon.net","sbcglobal.net"];if(_dom&&_free.indexOf(_dom)>=0){var _w=document.getElementById("rm-free-warn");if(!_w){_w=document.createElement("div");_w.id="rm-free-warn";var _sb=f.querySelector("button[type=submit]");if(_sb&&_sb.parentNode){_sb.parentNode.insertBefore(_w,_sb);}else{f.appendChild(_w);}}_w.innerHTML='<div style="border:1px solid #d8dee9;background:#f7f9fc;padding:14px 16px;margin:0 0 4px;font-family:Lora,Georgia,serif;font-size:13.5px;color:#2c3950;line-height:1.6;border-radius:8px;">Solo aceptamos <b>correos corporativos</b>, direcciones como @gmail, @hotmail, @outlook o @yahoo no son válidas. Usa el correo de tu empresa.<br><span style="display:block;margin-top:6px;">¿No tienes correo corporativo?</span><a href="https://wa.me/525579894034?text='+encodeURIComponent("Hola, ¿qué tal? Quiero informes del programa: "+(document.title||"").slice(0,70)+", no tengo correo corporativo.")+'" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;background:#25D366;color:#fff;padding:10px 18px;border-radius:7px;text-decoration:none;font-family:Poppins,Arial,sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;">ESCRÍBENOS POR WHATSAPP →</a></div>';_w.scrollIntoView({behavior:"smooth",block:"center"});var _b=f.querySelector("button[type=submit]");if(_b){_b.textContent="QUIERO EL TEMARIO";_b.disabled=false;}return false;}
 let phone="";if(rmIti){try{phone=rmIti.getNumber()||"";}catch(_){phone="";}if(!phone){var dial="+"+((rmIti.getSelectedCountryData()||{}).dialCode||"52");var raw=(d.whatsapp||"").replace(/[\s\-()]/g,"");phone=raw.startsWith("+")?raw:dial+raw.replace(/^0+/,"");}}
 else{phone=(d.whatsapp||"").trim().replace(/[\s\-()]/g,"");if(phone&&!phone.startsWith("+"))phone="+52"+phone.replace(/^0+/,"");}
 if(!phone||phone.length<10){alert("Escribe tu WhatsApp completo.");return false;}
@@ -662,65 +662,65 @@ else{m.textContent="Códigos incorrectos o expirados. Intenta de nuevo.";}}
 
 <!-- ===== Footer ===== -->
 <footer class="bg-rm-deep text-[#c4ad97] py-12 border-t border-rm-copper/30">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <p class="font-serif text-xl text-white mb-3">RiskMathics Financial Institute</p>
-    <p class="text-xs uppercase tracking-[0.22em] text-rm-copper2 mb-6">Learn · Apply · Profit</p>
-    <p class="text-sm mb-2">Structured Notes &amp; Cross-Asset Solutions · Virtual Live · 5 clases · 10 horas · MXN $35,000 + IVA</p>
-    <p class="text-xs text-[#8a7460]">Ciudad de México · operación internacional en Estados Unidos y Toronto</p>
-    <p class="text-xs text-[#8a7460] mt-6"><a href="https://riskmathics.com" class="hover:text-white transition">riskmathics.com</a> · <a href="mailto:tmartic@riskmathics.us" class="hover:text-white transition">tmartic@riskmathics.us</a></p>
-  </div>
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+ <p class="font-serif text-xl text-white mb-3">RiskMathics Financial Institute</p>
+ <p class="text-xs uppercase tracking-[0.22em] text-rm-copper2 mb-6">Learn · Apply · Profit</p>
+ <p class="text-sm mb-2">Structured Notes &amp; Cross-Asset Solutions · Virtual Live · 5 clases · 10 horas · MXN $35,000 + IVA</p>
+ <p class="text-xs text-[#8a7460]">Ciudad de México · operación internacional en Estados Unidos y Toronto</p>
+ <p class="text-xs text-[#8a7460] mt-6"><a href="https://riskmathics.com" class="hover:text-white transition">riskmathics.com</a> · <a href="mailto:tmartic@riskmathics.us" class="hover:text-white transition">tmartic@riskmathics.us</a></p>
+ </div>
 </footer>
 
 <!-- ===== Page JS: chart + reveal ===== -->
 <script>
 document.addEventListener('DOMContentLoaded', function(){
-  // Chart: contexto de mercado (estimación ilustrativa)
-  var ctx = document.getElementById('snMarketChart').getContext('2d');
-  var years = ['2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'];
-  var issuance = [480, 520, 560, 590, 640, 730, 810, 900, 1010, 1120];
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: years,
-      datasets: [{
-        label: 'Emisión global estimada de productos estructurados (USD bn)',
-        data: issuance,
-        borderColor: '#2a1810',
-        backgroundColor: 'rgba(194,96,58,0.12)',
-        borderWidth: 3,
-        pointBackgroundColor: '#c2603a',
-        pointBorderColor: '#fff',
-        pointRadius: 4,
-        pointHoverRadius: 6,
-        fill: true,
-        tension: 0.4
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: { display:true, position:'top', labels:{ font:{ family:'Poppins', size:12 } } },
-        tooltip: {
-          backgroundColor:'#170d08',
-          titleFont:{ family:'Poppins', size:13 },
-          bodyFont:{ family:'Poppins', size:14, weight:'bold' },
-          padding:10,
-          callbacks:{ label:function(c){ return 'USD ' + c.parsed.y + ' bn (est.)'; } }
-        }
-      },
-      scales: {
-        y: { beginAtZero:true, grid:{ color:'rgba(42,24,16,0.06)' }, ticks:{ font:{ family:'Poppins' }, callback:function(v){ return '$' + v + ' bn'; } } },
-        x: { grid:{ display:false }, ticks:{ font:{ family:'Poppins' } } }
-      }
-    }
-  });
+ // Chart: contexto de mercado (estimación ilustrativa)
+ var ctx = document.getElementById('snMarketChart').getContext('2d');
+ var years = ['2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'];
+ var issuance = [480, 520, 560, 590, 640, 730, 810, 900, 1010, 1120];
+ new Chart(ctx, {
+ type: 'line',
+ data: {
+ labels: years,
+ datasets: [{
+ label: 'Emisión global estimada de productos estructurados (USD bn)',
+ data: issuance,
+ borderColor: '#2a1810',
+ backgroundColor: 'rgba(194,96,58,0.12)',
+ borderWidth: 3,
+ pointBackgroundColor: '#c2603a',
+ pointBorderColor: '#fff',
+ pointRadius: 4,
+ pointHoverRadius: 6,
+ fill: true,
+ tension: 0.4
+ }]
+ },
+ options: {
+ responsive: true,
+ maintainAspectRatio: false,
+ plugins: {
+ legend: { display:true, position:'top', labels:{ font:{ family:'Poppins', size:12 } } },
+ tooltip: {
+ backgroundColor:'#170d08',
+ titleFont:{ family:'Poppins', size:13 },
+ bodyFont:{ family:'Poppins', size:14, weight:'bold' },
+ padding:10,
+ callbacks:{ label:function(c){ return 'USD ' + c.parsed.y + ' bn (est.)'; } }
+ }
+ },
+ scales: {
+ y: { beginAtZero:true, grid:{ color:'rgba(42,24,16,0.06)' }, ticks:{ font:{ family:'Poppins' }, callback:function(v){ return '$' + v + ' bn'; } } },
+ x: { grid:{ display:false }, ticks:{ font:{ family:'Poppins' } } }
+ }
+ }
+ });
 
-  // Reveal on scroll
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+ // Reveal on scroll
+ var io = new IntersectionObserver(function(entries){
+ entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+ }, { threshold: 0.1 });
+ document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 });
 </script>
 
