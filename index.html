@@ -89,7 +89,7 @@ tailwind.config = {
 <nav class="sticky top-0 z-50 backdrop-blur-md bg-rm-espresso/90 text-white border-b border-rm-copper/30 shadow-lg">
  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div class="flex justify-between items-center gap-4 h-16">
- <span class="font-serif font-semibold tracking-tight text-lg whitespace-nowrap">RISKMATHICS <span class="text-rm-copper2">|</span> <span class="hidden sm:inline">STRUCTURED NOTES 2026</span><span class="sm:hidden">SN 2026</span></span>
+ <span class="font-serif font-semibold tracking-tight text-lg whitespace-nowrap" style="display:inline-flex;align-items:center;gap:9px;"><img src="rm-logo.png" alt="RiskMathics" style="height:24px;width:auto;flex:none;display:block;">RISKMATHICS <span class="text-rm-copper2">|</span> <span class="hidden sm:inline">STRUCTURED NOTES 2026</span><span class="sm:hidden">SN 2026</span></span>
  <div class="hidden lg:flex items-center gap-6 text-sm font-medium">
  <a href="#abstract" class="hover:text-rm-copper2 transition">Overview</a>
  <a href="#audiencia" class="hover:text-rm-copper2 transition">Para quién</a>
@@ -723,8 +723,5 @@ document.addEventListener('DOMContentLoaded', function(){
  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 });
 </script>
-
-
-<!--RM-CORNER-LOGO--><style>#rmcl{position:fixed;top:10px;right:14px;z-index:99998;line-height:0}#rmcl img{height:46px;width:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.18))}@media(max-width:900px){#rmcl{display:none}}</style><a id="rmcl" href="https://riskmathics.com" target="_blank" rel="noopener" aria-label="RiskMathics"><img src="rm-logo.png" alt="RiskMathics"></a>
 </body>
 </html>
